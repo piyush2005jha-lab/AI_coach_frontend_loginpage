@@ -1,0 +1,17 @@
+@import './variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+*{box-sizing:border-box; margin:0; padding:0;}
+
+html, body, #root{
+  background:#131315; margin:0; padding:0; min-height:100%; overflow-x:hidden;
+}
+
+body{
+  background: var(--bg);
+  color: var(--text-hi);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.serif{font-family:'Fraunces', serif;}

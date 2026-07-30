@@ -1,0 +1,50 @@
+.sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:280px;
+    height:100vh;
+
+    padding:36px 28px;
+
+    background:var(--panel);
+    border-right:1px solid var(--line);
+
+    display:flex;
+    flex-direction:column;
+
+    overflow-y:auto;
+}
+
+.brand{display:flex; align-items:center; gap:11px; margin-bottom:40px;}
+.brand .mark{
+  width:36px; height:36px; border:1px solid var(--brass); display:flex; align-items:center;
+  justify-content:center; font-family:'Fraunces'; font-size:15px; color:var(--brass);
+}
+.brand h1{font-family:'Fraunces'; font-size:19px; font-weight:500; letter-spacing:0.01em;}
+
+.profile{padding-bottom:22px; margin-bottom:22px; border-bottom:1px solid var(--line);}
+.profile .name{font-family:'Fraunces'; font-size:15px; margin-bottom:4px;}
+.profile .role{font-size:11px; color:var(--text-low); letter-spacing:0.03em;}
+.profile .plan{
+  display:inline-block; margin-top:12px; font-size:9.5px; letter-spacing:0.12em; color:var(--brass);
+  border-top:1px solid var(--line-strong); border-bottom:1px solid var(--line-strong); padding:4px 0;
+}
+
+nav{display:flex; flex-direction:column; gap:2px; flex:1;}
+.nav-item{
+  display:flex; align-items:center; gap:12px; padding:11px 4px; font-size:12.5px; color:var(--text-mid);
+  letter-spacing:0.01em; border-bottom:1px solid transparent; transition:color .2s;
+}
+.nav-item .ic{width:14px; font-size:11px; color:var(--text-low);}
+.nav-item.active{color:var(--text-hi); border-bottom:1px solid var(--line-strong);}
+.nav-item.active .ic{color:var(--brass);}
+
+.sidebar-foot{margin-top:24px; padding-top:20px; border-top:1px solid var(--line);}
+.sidebar-foot p{font-size:11px; color:var(--text-low); line-height:1.6; margin-bottom:14px;}
+.sidebar-foot button{
+  width:100%; padding:11px; background:transparent; border:1px solid var(--brass); color:var(--brass);
+  font-size:11.5px; letter-spacing:0.05em; cursor:pointer; transition:all .2s;
+}
+.sidebar-foot button:hover{background:var(--brass); color:#0b0b0d;}

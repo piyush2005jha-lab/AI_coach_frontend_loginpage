@@ -1,0 +1,34 @@
+.upload-zone{
+  border:1.5px dashed var(--line-strong); padding:30px 22px; text-align:center; background:var(--brass-tint);
+  margin-bottom:16px; transition:all .25s; cursor:pointer; position:relative;
+}
+.upload-zone.drag{border-color:var(--brass); background:rgba(201,162,75,0.15); transform:scale(1.01);}
+.upload-zone .up-icon{font-size:22px; color:var(--brass); margin-bottom:8px; display:inline-block; transition:transform .3s;}
+.upload-zone.drag .up-icon{transform:translateY(-4px);}
+.upload-zone h3{font-family:'Fraunces'; font-size:16px; margin-bottom:6px; font-weight:500;}
+.upload-zone p{color:var(--text-low); font-size:12px;}
+
+.pdf-thumb{display:flex; align-items:center; gap:14px; border:1px solid var(--line-strong); background:var(--panel-hi); padding:12px 16px; margin-bottom:16px;}
+.pdf-thumb .icon{width:34px; height:40px; background:var(--brass); color:#0b0b0d; font-size:9px; font-weight:700; display:flex; align-items:center; justify-content:center;}
+.pdf-thumb .name{font-size:12.5px; font-weight:500;}
+.pdf-thumb .meta{font-size:10.5px; color:var(--text-low); margin-top:2px;}
+.pdf-thumb .status{margin-left:auto; font-size:10.5px; color:var(--brass);}
+.hidden{display:none;}
+
+.xp-row{display:flex; justify-content:space-between; font-size:11px; color:var(--text-low); margin-bottom:8px;}
+.xp-row b{color:var(--brass); font-weight:500;}
+.xp-track{height:3px; background:var(--line); margin-bottom:16px;}
+.xp-fill{height:100%; background:var(--brass); width:0; transition:width 1.2s ease-out;}
+
+.stars{display:flex; align-items:center; gap:6px; margin-bottom:18px;}
+.stars .s{color:var(--brass); font-size:13px;}
+.stars .s.off{color:var(--line-strong);}
+.stars span.lbl{font-size:11px; color:var(--text-low); margin-left:4px;}
+
+.persona-row{display:flex; gap:10px;}
+.persona-chip{
+  flex:1; text-align:center; padding:9px 4px; font-size:11px; border:1px solid var(--line); color:var(--text-mid);
+  transition:all .2s ease; cursor:pointer;
+}
+.persona-chip.active{border-color:var(--brass); color:var(--brass); background:rgba(201,162,75,0.06);}
+.persona-chip:hover{border-color:var(--brass); color:var(--brass); transform:translateY(-2px); box-shadow:0 6px 16px -6px rgba(201,162,75,0.4);}

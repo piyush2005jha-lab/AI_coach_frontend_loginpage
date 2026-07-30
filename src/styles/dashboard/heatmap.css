@@ -1,0 +1,80 @@
+/* ---------------- HEATMAP ---------------- */
+
+.heatgrid{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:5px;
+    position:relative;
+}
+
+/* ONLY cells */
+.heat-cell{
+    aspect-ratio:1;
+    cursor:pointer;
+    transition:transform .15s;
+}
+
+.heat-cell:hover{
+    transform:scale(1.12);
+    z-index:2;
+}
+
+.heat-legend{
+    display:flex;
+    justify-content:space-between;
+    font-size:10.5px;
+    color:var(--text-low);
+    margin-top:12px;
+}
+
+/* ---------------- TOOLTIP ---------------- */
+
+.tooltip{
+    position:absolute;
+
+    width:190px;
+
+    background:#0f0f0f;
+    border:1px solid var(--line-strong);
+    border-radius:10px;
+
+    padding:12px 14px;
+
+    font-size:11.5px;
+    line-height:1.6;
+
+    pointer-events:none;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:opacity .18s ease;
+
+    z-index:9999;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.45);
+}
+
+.tooltip.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.tt-title{
+    font-family:'Fraunces';
+    font-size:13px;
+    color:var(--brass);
+    margin-bottom:8px;
+}
+
+.tt-row{
+    display:flex;
+    justify-content:space-between;
+    color:var(--text-mid);
+    margin-top:4px;
+}
+
+.tt-row b{
+    color:var(--text-hi);
+    font-weight:600;
+}

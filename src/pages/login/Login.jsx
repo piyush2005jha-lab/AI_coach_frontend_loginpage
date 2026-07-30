@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import RobotScene from "../../components/login/RobotScene.jsx";
 import FloatingParticles from "../../components/login/FloatingParticles.jsx";
 import BackgroundGlow from "../../components/login/BackgroundGlow.jsx";
@@ -62,6 +62,7 @@ function GoogleIcon() {
 }
 
 export default function Login() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({ email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -74,20 +75,37 @@ export default function Login() {
   }, [error]);
 
   const handleSubmit = useCallback(
-    (event) => {
-      event.preventDefault();
-      if (!form.email || !form.password) {
-        setError("Enter both your email and password to continue.");
-        return;
-      }
-      setIsSubmitting(true);
-      setError("");
-      window.setTimeout(() => {
-        setIsSubmitting(false);
-      }, 1600);
-    },
-    [form]
-  );
+  (event) => {
+    event.preventDefault();
+
+    // Empty fields validation
+    if (!form.email || !form.password) {
+      setError("Enter both your email and password to continue.");
+      return;
+    }
+
+    // Demo credentials
+    if (
+      form.email !== "admin@gmail.com" ||
+      form.password !== "1234"
+    ) {
+      setError("Invalid email or password.");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setError("");
+
+    window.setTimeout(() => {
+      localStorage.setItem("isLoggedIn", "true");
+
+      setIsSubmitting(false);
+
+      navigate("/dashboard");
+    }, 1200);
+  },
+  [form, navigate]
+);
 
   return (
     <motion.main

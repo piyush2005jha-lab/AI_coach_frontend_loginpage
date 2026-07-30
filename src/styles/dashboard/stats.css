@@ -1,0 +1,10 @@
+.stats{display:grid; grid-template-columns:repeat(4,1fr); margin-bottom:44px;}
+.stat{padding:0 24px; border-left:1px solid var(--line);}
+.stat:first-child{padding-left:0; border-left:none;}
+.stat .lbl{
+  display:flex; align-items:center; gap:7px; font-size:10.5px; letter-spacing:0.08em;
+  color:var(--text-low); text-transform:uppercase; margin-bottom:12px;
+}
+.stat .lbl .ic{font-size:13px;}
+.stat .val{font-family:'Fraunces'; font-size:28px; font-weight:500;}
+.stat .delta{font-size:11px; color:var(--brass); margin-top:8px;}

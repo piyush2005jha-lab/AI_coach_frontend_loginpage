@@ -1,0 +1,13 @@
+:root{
+  --bg:#000000;
+  --panel:#131315;
+  --panel-hi:#17171a;
+  --line:rgba(255,215,0,0.08);
+  --line-strong:rgba(201,162,75,0.35);
+  --brass:#c9a24b;
+  --brass-dim:#7d6733;
+  --brass-tint:rgba(201,162,75,0.07);
+  --text-hi:#f3f1ea;
+  --text-mid:#a3a099;
+  --text-low:#67655e;
+}

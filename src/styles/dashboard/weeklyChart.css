@@ -1,0 +1,12 @@
+.linechart{width:100%; height:120px; margin-bottom:6px; overflow:visible;}
+.linechart polyline{stroke-dasharray:600; stroke-dashoffset:600; animation:draw 1.6s ease forwards;}
+.linechart circle{opacity:0; animation:fadein .3s ease forwards;}
+.linechart circle:hover{r:6; cursor:pointer;}
+
+.chart-labels{display:flex; font-size:10.5px; color:var(--text-low); margin-bottom:18px;}
+.chart-labels span{flex:1; text-align:center;}
+
+.mini-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+.mini-stat{background:var(--panel-hi); padding:14px; text-align:center;}
+.mini-stat .v{font-family:'Fraunces'; font-size:19px; color:var(--brass);}
+.mini-stat .l{font-size:10px; color:var(--text-low); margin-top:4px;}
