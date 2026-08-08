@@ -20,7 +20,7 @@ export default function Sidebar({ activeItem = "Dashboard" }) {
       </div>
 
       <div className="profile">
-        <div className="name">Piyush Yadav</div>
+        <div className="name">Piyush Jha</div>
         <div className="role">B.Tech · AI/ML specialisation</div>
         <div className="plan">PRO MEMBER</div>
       </div>
