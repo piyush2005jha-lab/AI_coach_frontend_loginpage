@@ -2,21 +2,47 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import Login from "./pages/login/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
+import Interview from "./pages/interview/Interview";
+import Analytics from "./pages/analytics/Analytics";
+
 
 function ProtectedRoute({ children }) {
-  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const isLoggedIn =
+    localStorage.getItem("isLoggedIn") === "true";
 
-  return isLoggedIn ? children : <Navigate to="/login" replace />;
+  return isLoggedIn ? (
+    children
+  ) : (
+    <Navigate to="/login" replace />
+  );
 }
+
 
 export default function App() {
   return (
     <Routes>
-      {/* Login */}
-      <Route path="/" element={<Navigate to="/login" replace />} />
-      <Route path="/login" element={<Login />} />
 
-      {/* Dashboard */}
+      {/* =========================
+          DEFAULT
+      ========================= */}
+      <Route
+        path="/"
+        element={<Navigate to="/login" replace />}
+      />
+
+
+      {/* =========================
+          LOGIN
+      ========================= */}
+      <Route
+        path="/login"
+        element={<Login />}
+      />
+
+
+      {/* =========================
+          DASHBOARD
+      ========================= */}
       <Route
         path="/dashboard"
         element={
@@ -26,8 +52,41 @@ export default function App() {
         }
       />
 
-      {/* Invalid Route */}
-      <Route path="*" element={<Navigate to="/login" replace />} />
+
+      {/* =========================
+          INTERVIEW
+      ========================= */}
+      <Route
+        path="/interview"
+        element={
+          <ProtectedRoute>
+            <Interview />
+          </ProtectedRoute>
+        }
+      />
+
+
+      {/* =========================
+          ANALYTICS
+      ========================= */}
+      <Route
+        path="/analytics"
+        element={
+          <ProtectedRoute>
+            <Analytics />
+          </ProtectedRoute>
+        }
+      />
+
+
+      {/* =========================
+          FALLBACK
+      ========================= */}
+      <Route
+        path="*"
+        element={<Navigate to="/login" replace />}
+      />
+
     </Routes>
   );
 }

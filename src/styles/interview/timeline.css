@@ -1,0 +1,289 @@
+.iv-timeline-wrap{
+  padding:26px 0 40px;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+
+
+.iv-timeline-title{
+
+  font-size:11px;
+
+  letter-spacing:1.4px;
+
+  text-transform:uppercase;
+
+  color:var(--iv-text-low);
+
+  margin-bottom:20px;
+
+  font-weight:600;
+
+}
+
+
+
+
+.iv-timeline{
+
+  display:flex;
+
+  align-items:center;
+
+  position:relative;
+
+  width:100%;
+
+}
+
+
+
+
+
+.iv-tl-line{
+
+  position:absolute;
+
+  top:17px;
+
+  left:17px;
+
+  right:17px;
+
+  height:1px;
+
+
+  background:
+
+  linear-gradient(
+    90deg,
+    rgba(200,155,60,.35),
+    rgba(255,255,255,.08)
+  );
+
+
+  z-index:0;
+
+}
+
+
+
+
+
+.iv-tl-item{
+
+  flex:1;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  position:relative;
+
+  z-index:1;
+
+}
+
+
+
+
+
+.iv-tl-node{
+
+  width:34px;
+
+  height:34px;
+
+
+  border-radius:50%;
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+
+  font-size:12px;
+
+
+  font-family:'JetBrains Mono',monospace;
+
+
+  background:var(--iv-bg);
+
+
+  border:
+
+  1px solid
+
+  rgba(255,255,255,.12);
+
+
+  color:var(--iv-text-low);
+
+
+  margin-bottom:10px;
+
+
+  transition:.25s ease;
+
+}
+
+
+
+
+
+.iv-tl-item:hover .iv-tl-node{
+
+  transform:translateY(-2px);
+
+}
+
+
+
+
+
+/* Completed */
+
+.iv-tl-item.done .iv-tl-node{
+
+  border-color:var(--iv-gold);
+
+  color:var(--iv-gold);
+
+
+  background:
+
+  var(--iv-gold-soft);
+
+}
+
+
+
+
+
+/* Current */
+
+.iv-tl-item.current .iv-tl-node{
+
+
+  border-color:var(--iv-gold);
+
+
+  color:#0B0B0D;
+
+
+  background:
+
+  linear-gradient(
+    120deg,
+    #C89B3C,
+    #E4C778
+  );
+
+
+  box-shadow:
+
+  0 0 18px
+
+  rgba(200,155,60,.5);
+
+
+  animation:
+
+  iv-current-node 2s infinite;
+
+}
+
+
+
+
+
+@keyframes iv-current-node{
+
+
+  0%,100%{
+
+    box-shadow:
+
+    0 0 18px rgba(200,155,60,.5);
+
+  }
+
+
+  50%{
+
+    box-shadow:
+
+    0 0 30px rgba(200,155,60,.8);
+
+  }
+
+
+}
+
+
+
+
+
+
+.iv-tl-label{
+
+  font-size:11px;
+
+  color:var(--iv-text-low);
+
+}
+
+
+
+
+
+.iv-tl-item.done .iv-tl-label,
+.iv-tl-item.current .iv-tl-label{
+
+  color:var(--iv-text-mid);
+
+}
+
+
+
+
+
+
+/* Mobile */
+
+@media(max-width:640px){
+
+  .iv-timeline{
+
+    overflow-x:auto;
+
+    justify-content:flex-start;
+
+    gap:20px;
+
+    padding-bottom:10px;
+
+  }
+
+
+  .iv-tl-item{
+
+    min-width:70px;
+
+    flex:none;
+
+  }
+
+
+  .iv-tl-line{
+
+    min-width:350px;
+
+  }
+
+}

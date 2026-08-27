@@ -1,0 +1,74 @@
+.trend-chart-wrapper {
+  height: 245px;
+  margin: 24px 30px 0;
+}
+
+.trend-chart {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.chart-grid {
+  stroke: #1b1c1e;
+  stroke-width: 1;
+}
+
+.score-polyline {
+  fill: none;
+  stroke: #d5a231;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.peer-polyline {
+  fill: none;
+  stroke: #706e68;
+  stroke-width: 2.5;
+  stroke-dasharray: 5 5;
+}
+
+.trend-legend {
+  display: flex;
+  gap: 25px;
+  padding: 0 31px 22px;
+  color: #88857e;
+  font-size: 12px;
+}
+
+.trend-legend span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trend-legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.legend-score {
+  background: #d5a231;
+}
+
+.legend-peer {
+  background: #706e68;
+}
+
+@media (max-width: 600px) {
+  .performance-header {
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  .trend-chart-wrapper {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .trend-legend {
+    padding-left: 20px;
+  }
+}

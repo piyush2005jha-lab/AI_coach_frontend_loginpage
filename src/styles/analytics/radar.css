@@ -1,0 +1,36 @@
+.skill-radar-placeholder {
+  width: 260px;
+  height: 260px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radar-ring {
+  position: absolute;
+  border: 1px solid #40351f;
+  transform: rotate(45deg);
+}
+
+.ring-one {
+  width: 80px;
+  height: 80px;
+}
+
+.ring-two {
+  width: 145px;
+  height: 145px;
+}
+
+.ring-three {
+  width: 210px;
+  height: 210px;
+}
+
+.radar-center {
+  color: #d9a735;
+  font-family: Georgia, serif;
+  font-size: 24px;
+}

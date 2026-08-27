@@ -1,0 +1,540 @@
+/* ================= COPILOT PANEL ================= */
+
+.iv-copilot{
+
+  border-left:
+  1px solid rgba(255,255,255,.06);
+
+  background:
+  linear-gradient(
+    180deg,
+    rgba(255,255,255,.018),
+    transparent
+  );
+
+
+  padding:28px 24px;
+
+
+  display:flex;
+
+  flex-direction:column;
+
+
+  overflow-y:auto;
+
+}
+
+
+.iv-copilot::-webkit-scrollbar{
+  width:5px;
+}
+
+
+.iv-copilot::-webkit-scrollbar-thumb{
+
+  background:
+  rgba(200,155,60,.2);
+
+  border-radius:10px;
+
+}
+
+
+
+
+
+/* ================= HEADER ================= */
+
+
+.iv-copilot-header{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  margin-bottom:24px;
+
+}
+
+
+
+.iv-avatar{
+
+  width:42px;
+
+  height:42px;
+
+
+  border-radius:14px;
+
+
+  background:
+
+  linear-gradient(
+    135deg,
+    #C89B3C,
+    #E4C778
+  );
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+
+  color:#0B0B0D;
+
+
+  font-family:'Fraunces',serif;
+
+
+  font-weight:700;
+
+  font-size:16px;
+
+
+  box-shadow:
+
+  0 0 22px
+
+  rgba(200,155,60,.35);
+
+}
+
+
+
+.iv-copilot-name{
+
+  font-size:15px;
+
+  font-weight:600;
+
+  color:var(--iv-text-hi);
+
+}
+
+
+
+.iv-copilot-status{
+
+  font-size:11px;
+
+  color:var(--iv-text-low);
+
+
+  display:flex;
+
+  align-items:center;
+
+  gap:7px;
+
+  margin-top:4px;
+
+}
+
+
+
+.iv-status-dot{
+
+  width:6px;
+
+  height:6px;
+
+  border-radius:50%;
+
+
+  background:var(--iv-green);
+
+
+  box-shadow:
+
+  0 0 8px
+
+  var(--iv-green);
+
+}
+
+
+
+
+
+/* ================= THINKING BUBBLE ================= */
+
+
+.iv-typing-bubble{
+
+
+  background:
+
+  rgba(255,255,255,.035);
+
+
+  border:
+
+  1px solid
+
+  rgba(255,255,255,.08);
+
+
+  border-radius:
+
+  16px 16px 16px 4px;
+
+
+  padding:16px;
+
+
+  margin-bottom:26px;
+
+
+  font-size:13px;
+
+
+  color:var(--iv-text-mid);
+
+
+  line-height:1.7;
+
+
+  box-shadow:
+
+  inset 0 0 30px rgba(255,255,255,.01);
+
+}
+
+
+
+.iv-typing-dots{
+
+  display:flex;
+
+  gap:5px;
+
+  margin-top:10px;
+
+}
+
+
+
+.iv-typing-dots span{
+
+  width:5px;
+
+  height:5px;
+
+
+  border-radius:50%;
+
+
+  background:var(--iv-gold);
+
+
+  opacity:.4;
+
+
+  animation:iv-tdot 1.2s infinite;
+
+}
+
+
+
+.iv-typing-dots span:nth-child(2){
+
+  animation-delay:.2s;
+
+}
+
+
+
+.iv-typing-dots span:nth-child(3){
+
+  animation-delay:.4s;
+
+}
+
+
+
+@keyframes iv-tdot{
+
+  0%,60%,100%{
+
+    opacity:.25;
+
+    transform:translateY(0);
+
+  }
+
+
+  30%{
+
+    opacity:1;
+
+    transform:translateY(-3px);
+
+  }
+
+}
+
+
+
+
+
+/* ================= SECTIONS ================= */
+
+
+.iv-copilot-section{
+
+  margin-bottom:28px;
+
+}
+
+
+
+
+
+/* ================= FOLLOW UPS ================= */
+
+
+.iv-followup-chip{
+
+
+  display:block;
+
+  width:100%;
+
+
+  text-align:left;
+
+
+  padding:14px 15px;
+
+
+  margin-bottom:10px;
+
+
+  background:
+
+  rgba(255,255,255,.025);
+
+
+  border:
+
+  1px solid
+
+  rgba(255,255,255,.08);
+
+
+  border-radius:14px;
+
+
+  font-size:12.5px;
+
+
+  color:var(--iv-text-mid);
+
+
+  line-height:1.55;
+
+
+  transition:.25s ease;
+
+
+}
+
+
+
+.iv-followup-chip:hover{
+
+
+  transform:translateX(-3px);
+
+
+  border-color:
+
+  var(--iv-gold-dim);
+
+
+  color:var(--iv-text-hi);
+
+
+  background:
+
+  var(--iv-gold-soft);
+
+
+}
+
+
+
+
+
+/* ================= AI HINT ================= */
+
+
+.iv-hint-box{
+
+
+  background:
+
+  rgba(200,155,60,.07);
+
+
+  border:
+
+  1px solid
+
+  rgba(200,155,60,.25);
+
+
+  border-radius:16px;
+
+
+  padding:16px;
+
+
+  font-size:12.5px;
+
+
+  color:var(--iv-text-mid);
+
+
+  line-height:1.7;
+
+
+}
+
+
+
+.iv-hint-box b{
+
+
+  color:
+
+  var(--iv-gold);
+
+
+  font-weight:600;
+
+}
+
+
+
+
+
+/* ================= ACTIONS ================= */
+
+
+.iv-copilot-actions{
+
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:10px;
+
+}
+
+
+
+.iv-cp-action{
+
+
+  display:flex;
+
+  align-items:center;
+
+
+  gap:10px;
+
+
+  padding:13px 15px;
+
+
+  border-radius:14px;
+
+
+  border:
+
+  1px solid
+
+  rgba(255,255,255,.08);
+
+
+  background:
+
+  rgba(255,255,255,.015);
+
+
+  font-size:12.5px;
+
+
+  color:var(--iv-text-mid);
+
+
+  transition:.25s ease;
+
+
+  text-align:left;
+
+}
+
+
+
+.iv-cp-action:hover{
+
+
+  border-color:
+
+  var(--iv-gold-dim);
+
+
+  color:
+
+  var(--iv-gold);
+
+
+  background:
+
+  var(--iv-gold-soft);
+
+
+  transform:translateY(-2px);
+
+}
+
+
+
+.iv-cp-action svg{
+
+  flex-shrink:0;
+
+}
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:980px){
+
+
+  .iv-copilot{
+
+    border-left:none;
+
+    border-top:
+
+    1px solid rgba(255,255,255,.06);
+
+  }
+
+
+}

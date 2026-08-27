@@ -1,0 +1,1909 @@
+/* =========================================================
+   PREPZO ANALYTICS — REFERENCE MATCH
+   Target: desktop screenshots supplied by user
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #09090b;
+  color: #e8e3da;
+}
+
+
+/* =========================================================
+   MAIN SHELL
+   LEFT SIDEBAR | CONTENT | COPILOT
+   ========================================================= */
+
+.analytics-shell {
+  width: 100%;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 303px minmax(0, 1fr) 353px;
+
+  background: #09090b;
+  color: #e8e3da;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LEFT SIDEBAR
+   ========================================================= */
+
+.analytics-sidebar {
+  width: 303px;
+  height: 100vh;
+
+  position: sticky;
+  top: 0;
+
+  padding: 30px 24px 22px;
+
+  background: #09090b;
+  border-right: 1px solid #1d1d1f;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 20;
+}
+
+
+/* BRAND */
+
+.analytics-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 36px;
+}
+
+.analytics-brand-logo {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #80601e;
+
+  color: #d7a431;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+}
+
+.analytics-brand span {
+  color: #f0ece5;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* PROFILE */
+
+.analytics-profile {
+  margin-bottom: 42px;
+}
+
+.analytics-profile h3 {
+  margin: 0 0 4px;
+
+  color: #f1ece4;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.analytics-profile p {
+  margin: 0;
+
+  color: #85827c;
+
+  font-size: 14px;
+}
+
+.analytics-pro {
+  margin-top: 13px;
+
+  width: max-content;
+
+  color: #d5a12e;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #73551c;
+}
+
+
+/* NAVIGATION */
+
+.analytics-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.analytics-nav-item {
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  border-bottom: 1px solid #18181a;
+
+  color: #aaa7a0;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.analytics-nav-item.active {
+  color: #f0ece5;
+  font-weight: 700;
+}
+
+.analytics-nav-icon {
+  width: 9px;
+
+  color: #686660;
+
+  font-size: 10px;
+}
+
+.analytics-nav-item.active .analytics-nav-icon {
+  color: #d6a333;
+}
+
+
+/* SIDEBAR BOTTOM */
+
+.analytics-sidebar-bottom {
+  margin-top: auto;
+
+  display: flex;
+  justify-content: center;
+}
+
+.analytics-sparkle {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #75571d;
+  border-radius: 50%;
+
+  color: #dba934;
+
+  font-size: 25px;
+
+  box-shadow: 0 0 30px rgba(211, 161, 45, 0.14);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.analytics-content {
+  min-width: 0;
+
+  padding: 25px 47px 60px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: #5b4925 transparent;
+}
+
+
+/* =========================================================
+   TOP HEADER
+   ========================================================= */
+
+.analytics-top {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 380px minmax(0, 1fr);
+
+  column-gap: 20px;
+
+  align-items: start;
+
+  margin-bottom: 31px;
+}
+
+.analytics-top-header {
+  width: 100%;
+  min-width: 0;
+}
+
+.analytics-top-header .analytics-header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.analytics-top-header .analytics-heading {
+  width: 100%;
+  min-height: 0;
+
+  display: block;
+
+  margin: 0;
+}
+
+
+/* BREADCRUMB */
+
+.analytics-top-header .analytics-breadcrumb {
+  margin: 0 0 17px;
+
+  color: #706d67;
+
+  font-size: 13px;
+}
+
+.analytics-top-header .analytics-breadcrumb span {
+  color: #625d52;
+}
+
+.analytics-top-header .analytics-breadcrumb b {
+  color: #9d742d;
+  font-weight: 500;
+}
+
+
+/* MAIN TITLE */
+
+.analytics-top-header .analytics-heading h1 {
+  margin: 0;
+
+  color: #f1ece4;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 35px;
+  line-height: 1.08;
+
+  letter-spacing: -0.8px;
+}
+
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+.analytics-top-header .analytics-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 18px;
+}
+
+.analytics-top-header .analytics-filters button,
+.analytics-top-header .analytics-filters > button {
+  height: 31px;
+
+  padding: 0 14px;
+
+  border: 1px solid #6a5221;
+  border-radius: 17px;
+
+  background: #0e0e10;
+
+  color: #d7a743;
+
+  font-size: 12px;
+}
+
+.month-growth {
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 13px;
+
+  border: 1px solid #31543e;
+  border-radius: 17px;
+
+  color: #73bc8b;
+
+  font-size: 12px;
+}
+
+.sessions-badge {
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 13px;
+
+  border: 1px solid #29292c;
+  border-radius: 17px;
+
+  color: #aaa69f;
+
+  font-size: 12px;
+
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   TOP STAT CARDS
+   ========================================================= */
+
+.analytics-top-cards {
+  width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+.analytics-top-cards .analytics-cards {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+
+  position: static !important;
+
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+
+  transform: none !important;
+}
+
+
+/* STAT CARD */
+
+.analytics-top-cards .analytics-stat-card {
+  width: 100%;
+  min-width: 0;
+
+  height: 116px;
+
+  margin: 0;
+  padding: 13px 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #121214,
+      #0e0e10
+    );
+
+  border: 1px solid #29282a;
+}
+
+
+/* VALUE */
+
+.analytics-top-cards .analytics-stat-card strong {
+  color: #eee9e1;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 23px;
+  line-height: 1.02;
+}
+
+
+/* GOLD */
+
+.analytics-top-cards .analytics-stat-card.gold strong {
+  color: #d8a633;
+}
+
+
+/* SYSTEM DESIGN */
+
+.analytics-top-cards .analytics-stat-card.track strong {
+  font-size: 18px;
+  line-height: 1.02;
+}
+
+
+/* LABEL */
+
+.analytics-top-cards .analytics-stat-card label {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #76726c;
+
+  font-size: 9.5px;
+  line-height: 1.25;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* CHANGE */
+
+.analytics-top-cards .analytics-stat-card small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #70a97c;
+
+  font-size: 10px;
+
+  line-height: 1.15;
+}
+
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.analytics-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(0, 0.92fr);
+
+  gap: 24px;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   COMMON PANEL
+   ========================================================= */
+
+.analytics-panel {
+  width: 100%;
+
+  border: 1px solid #302e29;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #121214,
+      #111113
+    );
+
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: 27px 30px 0;
+}
+
+.panel-header h2 {
+  margin: 0;
+
+  color: #eae5dc;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.panel-header p {
+  margin: 4px 0 0;
+
+  color: #77746e;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   SCORE TREND
+   ========================================================= */
+
+.performance-panel {
+  min-height: 397px;
+}
+
+.performance-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 18px;
+}
+
+
+/* TABS */
+
+.trend-tabs {
+  display: flex;
+  gap: 7px;
+}
+
+.trend-tabs button {
+  height: 29px;
+
+  padding: 0 13px;
+
+  border: 1px solid #27292b;
+  border-radius: 17px;
+
+  background: #101012;
+
+  color: #65625d;
+
+  font-size: 11px;
+}
+
+.trend-tabs button.active {
+  border-color: #dfae3c;
+
+  background: #e1b03c;
+
+  color: #15120b;
+
+  font-weight: 700;
+}
+
+
+/* CHART */
+
+.trend-chart-wrapper {
+  height: 226px;
+
+  margin: 24px 29px 0;
+
+  overflow: hidden;
+}
+
+.trend-chart {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  overflow: visible;
+}
+
+.chart-grid {
+  stroke: #1c1c1e;
+  stroke-width: 1;
+}
+
+.score-polyline {
+  fill: none;
+
+  stroke: #d5a231;
+
+  stroke-width: 3;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.peer-polyline {
+  fill: none;
+
+  stroke: #706e68;
+
+  stroke-width: 2.3;
+
+  stroke-dasharray: 5 5;
+}
+
+.trend-legend {
+  display: flex;
+
+  gap: 25px;
+
+  padding: 14px 30px 20px;
+
+  color: #88857e;
+
+  font-size: 11px;
+}
+
+.trend-legend span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.trend-legend i {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 2px;
+
+  display: inline-block;
+}
+
+.legend-score {
+  background: #d5a231;
+}
+
+.legend-peer {
+  background: #706e68;
+}
+
+
+/* =========================================================
+   SKILL BREAKDOWN
+   ========================================================= */
+
+.category-panel {
+  min-height: 397px;
+}
+
+.category-list {
+  padding: 25px 30px 28px;
+}
+
+.category-item {
+  margin-bottom: 18px;
+}
+
+.category-item:last-child {
+  margin-bottom: 0;
+}
+
+.category-info {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+}
+
+.category-info span {
+  color: #b8b4ad;
+
+  font-size: 13px;
+}
+
+.category-info strong {
+  color: #d0ccc4;
+
+  font-size: 12px;
+}
+
+.category-bar {
+  width: 100%;
+  height: 8px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #242527;
+}
+
+.category-fill {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #d1a344,
+      #e8c363
+    );
+}
+
+
+/* =========================================================
+   STRENGTHS / FOCUS
+   ========================================================= */
+
+.improvement-panel {
+  min-height: 286px;
+}
+
+.improvement-columns {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 31px;
+
+  padding: 20px 30px 25px;
+}
+
+.improvement-columns > div + div {
+  border-left: 1px solid #242326;
+
+  padding-left: 31px;
+}
+
+.strength-heading,
+.focus-heading {
+  margin: 0 0 13px;
+
+  font-size: 11px;
+
+  letter-spacing: 1.3px;
+}
+
+.strength-heading {
+  color: #73b784;
+}
+
+.focus-heading {
+  color: #d16b57;
+}
+
+.improvement-item {
+  display: flex;
+
+  gap: 11px;
+
+  align-items: flex-start;
+
+  padding: 10px 0 12px;
+
+  border-bottom: 1px solid #232527;
+}
+
+.improvement-item:last-child {
+  border-bottom: 0;
+}
+
+.improvement-item p {
+  margin: 0;
+
+  color: #b7b3ac;
+
+  font-size: 13px;
+
+  line-height: 1.3;
+}
+
+.green-dot,
+.red-dot {
+  width: 7px;
+  height: 7px;
+
+  min-width: 7px;
+
+  margin-top: 5px;
+
+  border-radius: 50%;
+}
+
+.green-dot {
+  background: #74b984;
+}
+
+.red-dot {
+  background: #d06c59;
+}
+
+
+/* =========================================================
+   PRACTICE STREAK
+   ========================================================= */
+
+.streak-panel {
+  min-height: 286px;
+}
+
+.streak-container {
+  padding: 25px 30px;
+}
+
+.streak-days {
+  display: grid;
+
+  grid-template-columns: repeat(14, 1fr);
+
+  gap: 7px;
+
+  margin-bottom: 13px;
+}
+
+.streak-day {
+  height: 17px;
+
+  border-radius: 3px;
+
+  background: #1b1d1e;
+}
+
+.streak-day.light {
+  background: #665020;
+}
+
+.streak-day.deep {
+  background: #dfb34b;
+}
+
+.streak-legend {
+  display: flex;
+
+  gap: 18px;
+
+  color: #9a968e;
+
+  font-size: 11px;
+}
+
+.streak-legend span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.streak-legend i {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 2px;
+}
+
+.streak-legend .none {
+  background: #17191a;
+}
+
+.streak-legend .light {
+  background: #554522;
+}
+
+.streak-legend .deep {
+  background: #dfb34b;
+}
+
+
+/* =========================================================
+   RECENT SESSIONS
+   ========================================================= */
+
+.recent-sessions {
+  grid-column: 1 / -1;
+
+  margin-top: 0;
+
+  min-height: 370px;
+}
+
+.sessions-table {
+  margin: 23px 30px 20px;
+}
+
+.sessions-head,
+.session-row {
+  display: grid;
+
+  grid-template-columns:
+    2.2fr
+    1.1fr
+    1fr
+    0.8fr
+    0.55fr;
+
+  align-items: center;
+
+  column-gap: 20px;
+}
+
+.sessions-head {
+  padding: 0 12px 14px;
+
+  border-bottom: 1px solid #252628;
+}
+
+.sessions-head span {
+  color: #716e68;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  font-weight: 700;
+}
+
+.session-row {
+  min-height: 61px;
+
+  padding: 0 12px;
+
+  border-bottom: 1px solid #202123;
+
+  color: #9f9c95;
+
+  font-size: 13px;
+}
+
+.session-row:last-child {
+  border-bottom: 0;
+}
+
+.session-row strong {
+  color: #d5d0c7;
+
+  font-size: 13px;
+}
+
+.track-badge {
+  width: fit-content;
+
+  padding: 5px 10px;
+
+  border-radius: 7px;
+
+  border: 1px solid #292b2d;
+
+  background: #1a1b1d;
+
+  color: #a4a09a;
+
+  font-size: 11px;
+}
+
+.session-score {
+  width: fit-content;
+
+  padding: 5px 9px;
+
+  border-radius: 13px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.session-score.good {
+  color: #76bb88;
+
+  border: 1px solid #31583d;
+
+  background: #101b14;
+}
+
+.session-score.average {
+  color: #d0a13c;
+
+  border: 1px solid #60491e;
+
+  background: #1b160d;
+}
+
+.session-score.bad {
+  color: #d9705b;
+
+  border: 1px solid #65352d;
+
+  background: #1c100e;
+}
+
+
+/* =========================================================
+   COPILOT
+   ========================================================= */
+
+.analytics-copilot {
+  width: 353px;
+  height: 100vh;
+
+  position: sticky;
+  top: 0;
+
+  padding: 21px 30px 45px;
+
+  background: #0b0b0d;
+
+  border-left: 1px solid #1f1f20;
+
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: #5b4925 transparent;
+
+  z-index: 15;
+}
+
+.analytics-copilot::-webkit-scrollbar {
+  width: 5px;
+}
+
+.analytics-copilot::-webkit-scrollbar-thumb {
+  background: #5b4925;
+  border-radius: 10px;
+}
+
+
+/* COPILOT HEADER */
+
+.copilot-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 24px;
+}
+
+.copilot-avatar {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #e0b44b;
+
+  color: #17130b;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 18px;
+
+  box-shadow: 0 0 24px rgba(224, 180, 75, 0.08);
+}
+
+.copilot-user h3 {
+  margin: 0 0 3px;
+
+  color: #eee9e1;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.copilot-user span {
+  color: #85827b;
+
+  font-size: 11px;
+}
+
+.copilot-user i {
+  display: inline-block;
+
+  width: 6px;
+  height: 6px;
+
+  margin-right: 5px;
+
+  border-radius: 50%;
+
+  background: #6cad7a;
+}
+
+
+/* SECTION */
+
+.copilot-section {
+  width: 100%;
+}
+
+.copilot-title {
+  margin-bottom: 13px;
+
+  color: #966d20;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* INSIGHT CARDS */
+
+.copilot-card {
+  width: 100%;
+
+  padding: 17px 18px;
+
+  margin-bottom: 13px;
+
+  border: 1px solid #282a2c;
+
+  border-radius: 16px;
+
+  background: #111113;
+}
+
+.copilot-card h4 {
+  margin: 0 0 9px;
+
+  color: #ddd8d0;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.copilot-card h4 span {
+  margin-right: 6px;
+
+  font-size: 9px;
+}
+
+.copilot-card.green h4 span {
+  color: #74b786;
+}
+
+.copilot-card.yellow h4 span {
+  color: #d7a63c;
+}
+
+.copilot-card.red h4 span {
+  color: #d16b58;
+}
+
+.copilot-card p {
+  margin: 0;
+
+  color: #a8a49e;
+
+  font-size: 12.5px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   QUESTION TYPES
+   ========================================================= */
+
+.question-section {
+  margin-top: 32px;
+}
+
+.question-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 11px 0;
+
+  border-bottom: 1px solid #202123;
+}
+
+.question-number {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #57431d;
+
+  border-radius: 9px;
+
+  color: #d3a236;
+
+  font-size: 10px;
+}
+
+.question-item strong {
+  display: block;
+
+  color: #dcd7cf;
+
+  font-size: 12.5px;
+}
+
+.question-item small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #74716b;
+
+  font-size: 10.5px;
+}
+
+
+/* =========================================================
+   RECOMMENDED NEXT
+   ========================================================= */
+
+.recommended-section {
+  margin-top: 32px;
+}
+
+.recommendation {
+  padding: 17px;
+
+  border: 1px solid #503c18;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(196, 143, 37, 0.07),
+      rgba(255, 255, 255, 0.01)
+    );
+}
+
+.recommendation p {
+  margin: 0 0 8px;
+
+  color: #c5c0b6;
+
+  font-size: 12.5px;
+
+  line-height: 1.5;
+}
+
+.recommendation b {
+  color: #d7a637;
+}
+
+.recommendation span {
+  color: #77736d;
+
+  font-size: 11.5px;
+
+  line-height: 1.5;
+}
+
+.recommended-button {
+  width: 100%;
+
+  height: 43px;
+
+  margin-top: 8px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #e0b44b;
+
+  color: #15120b;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.recommended-button:hover {
+  background: #edc360;
+}
+
+
+/* =========================================================
+   IMPORTANT OVERRIDES
+   Prevent old dashboard styles from moving cards
+   ========================================================= */
+
+.analytics-cards {
+  position: static !important;
+
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+
+  transform: none !important;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1500px) {
+  .analytics-shell {
+    grid-template-columns:
+      303px
+      minmax(0, 1fr)
+      353px;
+  }
+
+  .analytics-sidebar {
+    width: 303px;
+  }
+
+  .analytics-copilot {
+    width: 353px;
+  }
+
+  .analytics-content {
+    padding-left: 47px;
+    padding-right: 47px;
+  }
+}
+
+
+/* =========================================================
+   SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 1450px) {
+  .analytics-shell {
+    grid-template-columns:
+      280px
+      minmax(0, 1fr)
+      320px;
+  }
+
+  .analytics-sidebar {
+    width: 280px;
+  }
+
+  .analytics-copilot {
+    width: 320px;
+
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .analytics-content {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .analytics-top {
+    grid-template-columns:
+      350px
+      minmax(0, 1fr);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .analytics-shell {
+    grid-template-columns:
+      250px
+      minmax(0, 1fr);
+  }
+
+  .analytics-sidebar {
+    width: 250px;
+  }
+
+  .analytics-copilot {
+    display: none;
+  }
+
+  .analytics-top {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .analytics-top-cards {
+    order: 2;
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .analytics-shell {
+    display: block;
+
+    min-width: 0;
+
+    overflow: visible;
+  }
+
+  .analytics-sidebar {
+    display: none;
+  }
+
+  .analytics-content {
+    width: 100%;
+
+    padding: 24px 20px 50px;
+
+    overflow: visible;
+  }
+
+  .analytics-top {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-top-cards .analytics-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recent-sessions {
+    grid-column: auto;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .analytics-content {
+    padding: 20px 14px 40px;
+  }
+
+  .analytics-top-header .analytics-heading h1 {
+    font-size: 31px;
+  }
+
+  .analytics-top-cards .analytics-cards {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+  .analytics-top-cards .analytics-stat-card {
+    height: 110px;
+  }
+
+  .performance-header {
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .trend-chart-wrapper {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .improvement-columns {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .improvement-columns > div + div {
+    border-left: 0;
+
+    border-top: 1px solid #242326;
+
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  .sessions-table {
+    min-width: 720px;
+  }
+
+  .recent-sessions {
+    overflow-x: auto;
+  }
+
+  .streak-days {
+    gap: 4px;
+  }
+}
+/* =========================================================
+   FINAL SCROLL FIX
+   LEFT = FIXED
+   MIDDLE = INDEPENDENT SCROLL
+   RIGHT = INDEPENDENT SCROLL
+   ========================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   3 COLUMN APP
+   ========================================================= */
+
+.analytics-shell {
+  width: 100%;
+  height: 100vh;
+  min-height: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    303px
+    minmax(0, 1fr)
+    354px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LEFT SIDEBAR
+   FIXED — NO SCROLL
+   ========================================================= */
+
+.analytics-sidebar {
+  width: 303px;
+  height: 100vh;
+  min-height: 0;
+
+  position: relative;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MIDDLE ANALYTICS
+   INDEPENDENT SCROLL
+   ========================================================= */
+
+.analytics-content {
+  width: 100%;
+  height: 100vh;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  overscroll-behavior: contain;
+
+  scrollbar-width: thin;
+  scrollbar-color: #6b5528 #0b0b0d;
+}
+
+
+/* Middle scrollbar */
+
+.analytics-content::-webkit-scrollbar {
+  width: 7px;
+}
+
+.analytics-content::-webkit-scrollbar-track {
+  background: #0b0b0d;
+}
+
+.analytics-content::-webkit-scrollbar-thumb {
+  background: #6b5528;
+
+  border-radius: 10px;
+
+  border: 1px solid #0b0b0d;
+}
+
+.analytics-content::-webkit-scrollbar-thumb:hover {
+  background: #8a6c30;
+}
+
+
+/* =========================================================
+   RIGHT COPILOT
+   INDEPENDENT SCROLL
+   ========================================================= */
+
+.analytics-copilot {
+  width: 354px;
+  height: 100vh;
+
+  min-width: 0;
+  min-height: 0;
+
+  position: relative;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  flex-shrink: 0;
+
+  overscroll-behavior: contain;
+
+  scrollbar-width: thin;
+  scrollbar-color: #6b5528 #0b0b0d;
+}
+
+
+/* Right scrollbar */
+
+.analytics-copilot::-webkit-scrollbar {
+  width: 7px;
+}
+
+.analytics-copilot::-webkit-scrollbar-track {
+  background: #0b0b0d;
+}
+
+.analytics-copilot::-webkit-scrollbar-thumb {
+  background: #6b5528;
+
+  border-radius: 10px;
+
+  border: 1px solid #0b0b0d;
+}
+
+.analytics-copilot::-webkit-scrollbar-thumb:hover {
+  background: #8a6c30;
+}
+
+
+/* =========================================================
+   IMPORTANT
+   Prevent content from increasing shell height
+   ========================================================= */
+
+.analytics-content,
+.analytics-copilot {
+  min-height: 0;
+}
+
+.analytics-content > *,
+.analytics-copilot > * {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1201px) {
+
+  .analytics-shell {
+    width: 100%;
+    height: 100vh;
+    min-height: 0;
+
+    grid-template-columns:
+      303px
+      minmax(0, 1fr)
+      354px;
+
+    overflow: hidden;
+  }
+
+
+  /* LEFT */
+
+  .analytics-sidebar {
+    width: 303px;
+    height: 100vh;
+
+    overflow: hidden;
+  }
+
+
+  /* MIDDLE */
+
+  .analytics-content {
+    height: 100vh;
+    min-height: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+
+  /* RIGHT */
+
+  .analytics-copilot {
+    width: 354px;
+    height: 100vh;
+    min-height: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+/* =========================================================
+   SIDEBAR — SMALLER TYPOGRAPHY
+   ========================================================= */
+
+/* Prepzo logo */
+.analytics-brand span {
+  font-size: 22px !important;
+}
+
+/* User name */
+.analytics-profile h3 {
+  font-size: 16px !important;
+}
+
+/* Course / specialization */
+.analytics-profile p {
+  font-size: 13px !important;
+}
+
+/* Pro member */
+.analytics-pro {
+  font-size: 11px !important;
+  letter-spacing: 1.2px !important;
+}
+
+/* Navigation items */
+.analytics-nav-item {
+  font-size: 15px !important;
+}
+
+/* Active Analytics */
+.analytics-nav-item.active {
+  font-size: 15px !important;
+}
+
+/* Navigation icons */
+.analytics-nav-icon {
+  font-size: 9px !important;
+}
+
+/* Logo P */
+.analytics-brand-logo {
+  font-size: 19px !important;
+}
+/* =========================================================
+   SIDEBAR — COMPACT SPACING
+   ========================================================= */
+
+/* Sidebar overall */
+.analytics-sidebar {
+  padding: 26px 22px 18px !important;
+}
+
+
+/* Brand */
+.analytics-brand {
+  gap: 13px !important;
+  margin-bottom: 30px !important;
+}
+
+.analytics-brand-logo {
+  width: 44px !important;
+  height: 44px !important;
+  font-size: 18px !important;
+}
+
+.analytics-brand span {
+  font-size: 22px !important;
+}
+
+
+/* Profile */
+.analytics-profile {
+  margin-bottom: 30px !important;
+}
+
+.analytics-profile h3 {
+  font-size: 16px !important;
+  margin-bottom: 3px !important;
+}
+
+.analytics-profile p {
+  font-size: 13px !important;
+}
+
+.analytics-pro {
+  margin-top: 10px !important;
+  padding-bottom: 8px !important;
+
+  font-size: 11px !important;
+}
+
+
+/* Navigation */
+.analytics-nav-item {
+  height: 50px !important;
+
+  gap: 12px !important;
+
+  font-size: 15px !important;
+}
+
+.analytics-nav-icon {
+  width: 8px !important;
+  font-size: 9px !important;
+}
+
+
+/* Bottom sparkle */
+.analytics-sidebar-bottom {
+  margin-top: auto !important;
+}
+
+.analytics-sparkle {
+  width: 62px !important;
+  height: 62px !important;
+
+  font-size: 22px !important;
+}

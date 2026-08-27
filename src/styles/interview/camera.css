@@ -1,0 +1,564 @@
+.iv-camera-module{
+  margin-bottom:22px;
+}
+
+
+/* ================= CAMERA PANEL ================= */
+
+.iv-camera-panel{
+
+  background:
+  linear-gradient(
+    180deg,
+    rgba(255,255,255,0.03),
+    rgba(255,255,255,0.01)
+  );
+
+  border:1px solid var(--iv-panel-border);
+
+  border-radius:16px;
+
+  padding:10px;
+
+  backdrop-filter:blur(14px);
+
+  box-shadow:
+  0 16px 40px -26px rgba(0,0,0,0.7);
+
+  transition:.25s ease;
+
+}
+
+
+.iv-camera-panel:hover{
+
+  border-color:rgba(200,155,60,.45);
+
+}
+
+
+
+
+
+/* ================= CAMERA PREVIEW ================= */
+
+
+.iv-camera-preview{
+
+  position:relative;
+
+  border-radius:11px;
+
+  overflow:hidden;
+
+  height:132px;
+
+
+  background:
+
+  radial-gradient(
+    circle at 50% 42%,
+    rgba(200,155,60,0.10),
+    transparent 62%
+  ),
+
+  repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,.025) 0px,
+    rgba(255,255,255,.025) 1px,
+    transparent 1px,
+    transparent 24px
+  ),
+
+  repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,.025) 0px,
+    rgba(255,255,255,.025) 1px,
+    transparent 1px,
+    transparent 24px
+  ),
+
+  linear-gradient(
+    160deg,
+    #16151A,
+    #0B0B0D 70%
+  );
+
+
+  border:1px solid rgba(200,155,60,.18);
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+}
+
+
+
+
+
+.iv-cam-badge-row{
+
+  position:absolute;
+
+  top:9px;
+
+  left:9px;
+
+  right:9px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+}
+
+
+
+
+
+/* LIVE BADGE */
+
+.iv-cam-live{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:5px;
+
+  font-size:9px;
+
+  letter-spacing:.5px;
+
+  font-weight:700;
+
+  color:white;
+
+  background:rgba(201,106,90,.9);
+
+  padding:3px 7px;
+
+  border-radius:100px;
+
+}
+
+
+.iv-cam-live .dot{
+
+  width:5px;
+
+  height:5px;
+
+  border-radius:50%;
+
+  background:white;
+
+  animation:iv-pulse 1.5s infinite;
+
+}
+
+
+
+
+/* AI VISION */
+
+.iv-cam-vision-badge{
+
+  font-size:8.5px;
+
+  letter-spacing:.7px;
+
+  text-transform:uppercase;
+
+  font-weight:700;
+
+  color:#0B0B0D;
+
+
+  background:
+  linear-gradient(
+    120deg,
+    #C89B3C,
+    #E4C778
+  );
+
+
+  padding:3px 7px;
+
+  border-radius:100px;
+
+}
+
+
+
+
+
+/* FACE ICON */
+
+.iv-cam-face-icon{
+
+  width:46px;
+
+  height:46px;
+
+  border-radius:50%;
+
+
+  border:
+
+  1.5px dashed
+
+  rgba(200,155,60,.4);
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+
+  color:var(--iv-gold-dim);
+
+
+  box-shadow:
+
+  0 0 20px
+
+  rgba(200,155,60,.18);
+
+}
+
+
+
+
+
+/* CONTROLS */
+
+.iv-cam-controls{
+
+  position:absolute;
+
+  bottom:9px;
+
+  right:9px;
+
+  display:flex;
+
+  gap:6px;
+
+}
+
+
+
+.iv-cam-icon-btn{
+
+  width:24px;
+
+  height:24px;
+
+  border-radius:7px;
+
+
+  background:
+
+  rgba(0,0,0,.45);
+
+
+  border:
+
+  1px solid
+
+  rgba(255,255,255,.12);
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+
+  color:var(--iv-text-mid);
+
+
+  backdrop-filter:blur(6px);
+
+  transition:.2s ease;
+
+}
+
+
+
+.iv-cam-icon-btn:hover{
+
+  color:var(--iv-gold);
+
+  border-color:var(--iv-gold-dim);
+
+  transform:translateY(-1px);
+
+}
+
+
+
+
+
+/* ================= METRICS ================= */
+
+
+.iv-cam-metrics{
+
+  padding:12px 4px 2px;
+
+}
+
+
+
+.iv-cam-metric-row{
+
+  margin-bottom:9px;
+
+}
+
+
+
+.iv-cam-metric-row:last-child{
+
+  margin-bottom:0;
+
+}
+
+
+
+.iv-cam-metric-top{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:5px;
+
+}
+
+
+
+.iv-cam-metric-name{
+
+  font-size:11px;
+
+  color:var(--iv-text-mid);
+
+  display:flex;
+
+  align-items:center;
+
+  gap:6px;
+
+}
+
+
+
+.iv-cam-metric-live{
+
+  width:4px;
+
+  height:4px;
+
+  border-radius:50%;
+
+  background:var(--iv-green);
+
+  animation:iv-pulse 1.8s infinite;
+
+}
+
+
+
+.iv-cam-metric-pct{
+
+  font-size:11px;
+
+  font-family:'JetBrains Mono',monospace;
+
+  color:var(--iv-text-hi);
+
+}
+
+
+
+.iv-cam-metric-bar{
+
+  width:100%;
+
+  height:4px;
+
+  border-radius:3px;
+
+  background:rgba(255,255,255,.06);
+
+  overflow:hidden;
+
+}
+
+
+
+.iv-cam-metric-bar i{
+
+  display:block;
+
+  height:100%;
+
+  border-radius:3px;
+
+
+  background:
+
+  linear-gradient(
+    90deg,
+    var(--iv-gold),
+    #E4C778
+  );
+
+
+  transition:
+
+  width .6s ease;
+
+}
+
+
+
+
+
+/* ================= FEEDBACK ================= */
+
+
+.iv-cam-feedback{
+
+  margin-top:12px;
+
+
+  background:
+
+  rgba(200,155,60,.055);
+
+
+  border:
+
+  1px solid
+
+  rgba(200,155,60,.2);
+
+
+  border-radius:12px;
+
+
+  padding:11px 12px;
+
+}
+
+
+
+.iv-cam-feedback-title{
+
+  font-size:10.5px;
+
+  font-weight:600;
+
+  color:var(--iv-gold);
+
+  margin-bottom:8px;
+
+
+  display:flex;
+
+  align-items:center;
+
+  gap:6px;
+
+}
+
+
+
+.iv-cam-feedback-line{
+
+  font-size:11px;
+
+  color:var(--iv-text-mid);
+
+  line-height:1.5;
+
+  padding:5px 0;
+
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:7px;
+
+}
+
+
+
+.iv-cam-feedback-line .fdot{
+
+  margin-top:5px;
+
+  width:4px;
+
+  height:4px;
+
+  border-radius:50%;
+
+
+  flex-shrink:0;
+
+}
+
+
+
+.iv-cam-feedback-line.good .fdot{
+
+  background:var(--iv-green);
+
+}
+
+
+
+.iv-cam-feedback-line.warn .fdot{
+
+  background:#D9B36C;
+
+}
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:640px){
+
+  .iv-camera-preview{
+
+    height:150px;
+
+  }
+
+
+  .iv-cam-feedback-line{
+
+    font-size:12px;
+
+  }
+
+}

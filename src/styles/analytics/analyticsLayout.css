@@ -1,0 +1,378 @@
+.analytics-shell {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background: #08090a;
+  color: #e8e3da;
+  overflow: hidden;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.analytics-sidebar {
+  width: 302px;
+  min-width: 302px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 35px 26px 28px;
+  background: #090a0b;
+  border-right: 1px solid #202224;
+  display: flex;
+  flex-direction: column;
+}
+
+.analytics-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 43px;
+}
+
+.analytics-brand-logo {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #80601e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d7a431;
+  font-family: Georgia, serif;
+  font-size: 23px;
+}
+
+.analytics-brand span {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #f0ece5;
+}
+
+.analytics-profile {
+  margin-bottom: 38px;
+}
+
+.analytics-profile h3 {
+  margin: 0 0 5px;
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+
+.analytics-profile p {
+  margin: 0;
+  color: #888680;
+  font-size: 14px;
+}
+
+.analytics-pro {
+  color: #d5a12e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-top: 17px;
+}
+
+.analytics-profile-line {
+  width: 97px;
+  height: 1px;
+  background: #73551c;
+  margin-top: 10px;
+}
+
+.analytics-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.analytics-nav-item {
+  height: 56px;
+  border-bottom: 1px solid #1c1e20;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #b5b1ab;
+  font-size: 16px;
+}
+
+.analytics-nav-item.active {
+  color: #f0ece5;
+  font-weight: 700;
+}
+
+.analytics-nav-icon {
+  color: #686660;
+  font-size: 13px;
+}
+
+.analytics-nav-item.active .analytics-nav-icon {
+  color: #d6a333;
+}
+
+.analytics-sidebar-bottom {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.analytics-sparkle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 1px solid #75571d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dba934;
+  font-size: 25px;
+  box-shadow: 0 0 30px rgba(211, 161, 45, 0.14);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.analytics-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px 43px 65px;
+  overflow-y: auto;
+}
+
+.analytics-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.analytics-content::-webkit-scrollbar-thumb {
+  background: #4a391d;
+}
+
+/* =========================
+   RIGHT COPILOT
+========================= */
+
+.analytics-copilot {
+  width: 352px;
+  min-width: 352px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  background: #090a0b;
+  border-left: 1px solid #252729;
+  padding: 30px 27px 40px;
+}
+
+.analytics-copilot::-webkit-scrollbar {
+  width: 5px;
+}
+
+.analytics-copilot::-webkit-scrollbar-thumb {
+  background: #4c3a1b;
+}
+
+.copilot-user {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 37px;
+}
+
+.copilot-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  background: #e0b44b;
+  color: #17130b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
+.copilot-user h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: #eee9e1;
+}
+
+.copilot-user span {
+  color: #85827b;
+  font-size: 12px;
+}
+
+.copilot-user i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #6cad7a;
+}
+
+.copilot-title {
+  color: #966d20;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.copilot-card {
+  padding: 17px 18px;
+  margin-bottom: 12px;
+  border: 1px solid #282a2c;
+  border-radius: 16px;
+  background: #111213;
+}
+
+.copilot-card h4 {
+  margin: 0 0 11px;
+  color: #ddd8d0;
+  font-size: 14px;
+}
+
+.copilot-card h4 span {
+  margin-right: 6px;
+  font-size: 9px;
+}
+
+.copilot-card.green h4 span {
+  color: #74b786;
+}
+
+.copilot-card.yellow h4 span {
+  color: #d7a63c;
+}
+
+.copilot-card.red h4 span {
+  color: #d16b58;
+}
+
+.copilot-card p {
+  margin: 0;
+  color: #a8a49e;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.question-section {
+  margin-top: 36px;
+}
+
+.question-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #202123;
+}
+
+.question-number {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #57431d;
+  border-radius: 9px;
+  color: #d3a236;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.question-item strong {
+  display: block;
+  color: #dcd7cf;
+  font-size: 13px;
+}
+
+.question-item small {
+  display: block;
+  margin-top: 5px;
+  color: #74716b;
+  font-size: 11px;
+}
+
+.recommended-section {
+  margin-top: 35px;
+}
+
+.recommendation {
+  border: 1px solid #503c18;
+  border-radius: 16px;
+  padding: 17px;
+  background: linear-gradient(
+    135deg,
+    rgba(196, 143, 37, 0.07),
+    rgba(255, 255, 255, 0.01)
+  );
+}
+
+.recommendation p {
+  margin: 0 0 9px;
+  color: #c5c0b6;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.recommendation b {
+  color: #d7a637;
+}
+
+.recommendation span {
+  color: #77736d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.analytics-panel {
+  border: 1px solid #4d3a1a;
+  border-radius: 22px;
+  background: linear-gradient(
+    145deg,
+    #111213,
+    #0d0e0f
+  );
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: 28px 31px 0;
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 21px;
+  color: #eae5dc;
+}
+
+.panel-header p {
+  margin: 5px 0 0;
+  color: #77746e;
+  font-size: 13px;
+}
+
+@media (max-width: 1350px) {
+  .analytics-copilot {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .analytics-sidebar {
+    display: none;
+  }
+
+  .analytics-content {
+    padding: 25px 20px 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .analytics-content {
+    padding: 20px 14px 40px;
+  }
+}

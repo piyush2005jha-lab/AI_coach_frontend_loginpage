@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+.iv-app {
+  --iv-bg: #0B0B0D;
+  --iv-bg-elevated: #111113;
+  --iv-panel: rgba(255,255,255,0.03);
+  --iv-panel-border: rgba(200,155,60,0.22);
+  --iv-gold: #C89B3C;
+  --iv-gold-soft: rgba(200,155,60,0.14);
+  --iv-gold-dim: rgba(200,155,60,0.55);
+  --iv-text-hi: #F2EFE9;
+  --iv-text-mid: #B9B4AA;
+  --iv-text-low: #726C60;
+  --iv-green: #7FBF8C;
+  --iv-red: #C96A5A;
+
+  display: grid;
+  grid-template-columns: 272px 1fr 320px;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--iv-bg);
+  color: var(--iv-text-hi);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.iv-app *{ box-sizing:border-box; }
+.iv-app ::selection{ background:var(--iv-gold-soft); }
+.iv-app button{ font-family:inherit; color:inherit; cursor:pointer; background:none; border:none; }
+
+.iv-label{
+  font-size:10.5px; letter-spacing:1.2px; text-transform:uppercase;
+  color:var(--iv-gold-dim); margin-bottom:8px; font-weight:600;
+}
+
+/* ================= SIDEBAR ================= */
+.iv-sidebar{
+  background:#0A0A0C;
+  border-right:1px solid rgba(255,255,255,0.06);
+  padding:32px 24px;
+  display:flex;
+  flex-direction:column;
+}
+.iv-brand{ display:flex; align-items:center; gap:14px; margin-bottom:36px; }
+.iv-brand-mark{
+  width:40px; height:40px;
+  border:1px solid var(--iv-gold-dim);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--iv-gold); font-size:17px; font-weight:600; letter-spacing:0.5px;
+  font-family:'Fraunces', serif;
+}
+.iv-brand-name{ font-size:20px; font-weight:600; letter-spacing:0.2px; font-family:'Fraunces', serif; }
+
+.iv-profile{ margin-bottom:22px; }
+.iv-profile-name{ font-size:16px; font-weight:600; font-family:'Fraunces', serif; }
+.iv-profile-sub{ font-size:12.5px; color:var(--iv-text-low); margin-top:4px; letter-spacing:0.2px; }
+.iv-pro-badge{
+  display:inline-block; margin-top:14px;
+  font-size:10.5px; letter-spacing:1.6px; color:var(--iv-gold); font-weight:600;
+  padding-bottom:10px; border-bottom:1px solid rgba(200,155,60,0.35);
+}
+
+.iv-nav{ margin-top:20px; display:flex; flex-direction:column; }
+.iv-nav-item{
+  display:flex; align-items:center; gap:14px;
+  padding:16px 4px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  font-size:14.5px; color:var(--iv-text-mid);
+  transition:color .2s ease; cursor:pointer;
+}
+.iv-nav-item .iv-dot{ width:6px; height:6px; border:1px solid var(--iv-text-low); transform:rotate(45deg); flex-shrink:0; }
+.iv-nav-item.active{ color:var(--iv-text-hi); font-weight:600; }
+.iv-nav-item.active .iv-dot{ background:var(--iv-gold); border-color:var(--iv-gold); }
+.iv-nav-item:hover{ color:var(--iv-text-hi); }
+
+.iv-sidebar-footer{ margin-top:auto; display:flex; justify-content:center; padding-top:24px; }
+.iv-ai-orb{
+  width:60px; height:60px; border-radius:50%;
+  border:1px solid var(--iv-gold-dim);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 0 24px rgba(200,155,60,0.25);
+  color:var(--iv-gold);
+}
+
+/* ================= CENTER ================= */
+.iv-center{ padding:28px 40px 0 40px; overflow-y:auto; position:relative; }
+.iv-center::-webkit-scrollbar{ width:6px; }
+.iv-center::-webkit-scrollbar-thumb{ background:rgba(200,155,60,0.25); border-radius:4px; }
+
+.iv-topbar{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:28px; }
+.iv-breadcrumb{
+  font-size:12px; color:var(--iv-text-low); letter-spacing:0.3px;
+  display:flex; align-items:center; gap:8px; margin-bottom:14px;
+}
+.iv-crumb-sep{ color:var(--iv-text-low); }
+.iv-crumb-current{ color:var(--iv-gold-dim); }
+.iv-header-title{
+  font-size:30px; font-weight:600; letter-spacing:0.2px; margin-bottom:12px;
+  font-family:'Fraunces', serif;
+}
+.iv-meta-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.iv-chip{
+  font-size:12px; padding:6px 13px;
+  border:1px solid rgba(255,255,255,0.09);
+  border-radius:100px; color:var(--iv-text-mid); letter-spacing:0.3px;
+  display:flex; align-items:center; gap:6px;
+  background:rgba(255,255,255,0.02);
+}
+.iv-chip.iv-chip-gold{ border-color:rgba(200,155,60,0.4); color:var(--iv-gold); }
+.iv-chip.iv-chip-difficulty{ color:#D9B36C; border-color:rgba(217,179,108,0.35); }
+.iv-live-dot{
+  width:6px; height:6px; border-radius:50%; background:var(--iv-red);
+  box-shadow:0 0 8px var(--iv-red);
+  animation:iv-pulse 1.6s ease-in-out infinite;
+}
+@keyframes iv-pulse{ 0%,100%{opacity:1;} 50%{opacity:0.35;} }
+
+.iv-widgets{ display:flex; gap:10px; }
+.iv-widget{
+  background:linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:14px; padding:12px 16px; min-width:92px; text-align:center;
+}
+.iv-widget-val{ font-size:17px; font-weight:600; font-family:'Fraunces',serif; }
+.iv-widget-val.gold{ color:var(--iv-gold); }
+.iv-widget-lbl{ font-size:10px; color:var(--iv-text-low); letter-spacing:0.8px; text-transform:uppercase; margin-top:4px; }
+.iv-confidence-bar{ width:100%; height:3px; background:rgba(255,255,255,0.08); margin-top:8px; border-radius:2px; overflow:hidden; }
+.iv-confidence-bar i{ display:block; height:100%; background:linear-gradient(90deg, var(--iv-gold), #E4C778); }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1200px){
+  .iv-app{ grid-template-columns: 240px 1fr 280px; }
+}
+@media (max-width: 980px){
+  .iv-app{ grid-template-columns: 1fr; grid-template-rows: auto auto auto; height:auto; overflow:visible; }
+  .iv-sidebar{ flex-direction:row; align-items:center; overflow-x:auto; padding:16px 20px; }
+  .iv-nav{ flex-direction:row; margin-top:0; }
+  .iv-nav-item{ border-bottom:none; padding:8px 12px; white-space:nowrap; }
+  .iv-sidebar-footer{ margin-top:0; margin-left:auto; padding-top:0; }
+  .iv-profile{ display:none; }
+  .iv-copilot{ border-left:none; border-top:1px solid rgba(255,255,255,0.06); }
+}
+@media (max-width: 640px){
+  .iv-center{ padding:20px 16px 0; }
+  .iv-topbar{ flex-direction:column; gap:16px; }
+  .iv-widgets{ width:100%; overflow-x:auto; }
+  .iv-header-title{ font-size:24px; }
+}

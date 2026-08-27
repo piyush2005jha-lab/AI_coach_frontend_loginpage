@@ -1,0 +1,152 @@
+.recent-sessions {
+  grid-column: 1 / -1;
+  margin-top: 24px;
+  min-height: 370px;
+}
+
+.sessions-table {
+  margin: 23px 30px 25px;
+}
+
+.sessions-head,
+.session-row {
+  display: grid;
+  grid-template-columns: 2.2fr 1.1fr 1fr 0.8fr 0.55fr;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.sessions-head {
+  padding: 0 12px 15px;
+  border-bottom: 1px solid #252628;
+}
+
+.sessions-head span {
+  color: #716e68;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.session-row {
+  min-height: 63px;
+  padding: 0 12px;
+  border-bottom: 1px solid #202123;
+  color: #9f9c95;
+  font-size: 14px;
+}
+
+.session-row strong {
+  color: #d5d0c7;
+  font-size: 14px;
+}
+
+.track-badge {
+  width: fit-content;
+  padding: 5px 11px;
+  border-radius: 7px;
+  border: 1px solid #292b2d;
+  background: #1b1c1e;
+  color: #a4a09a;
+  font-size: 12px;
+}
+
+.session-score {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 13px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.session-score.good {
+  color: #76bb88;
+  border: 1px solid #31583d;
+  background: #101b14;
+}
+
+.session-score.average {
+  color: #d0a13c;
+  border: 1px solid #60491e;
+  background: #1b160d;
+}
+
+.session-score.bad {
+  color: #d9705b;
+  border: 1px solid #65352d;
+  background: #1c100e;
+}
+
+.streak-panel {
+  min-height: 300px;
+}
+
+.streak-container {
+  padding: 27px 31px;
+}
+
+.streak-days {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  gap: 7px;
+  margin-bottom: 17px;
+}
+
+.streak-day {
+  height: 18px;
+  border-radius: 4px;
+  background: #1b1d1e;
+}
+
+.streak-day.light {
+  background: #554522;
+}
+
+.streak-day.deep {
+  background: #dfb34b;
+}
+
+.streak-legend {
+  display: flex;
+  gap: 17px;
+  color: #9a968e;
+  font-size: 12px;
+}
+
+.streak-legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.streak-legend i {
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+}
+
+.streak-legend .none {
+  background: #17191a;
+}
+
+.streak-legend .light {
+  background: #554522;
+}
+
+.streak-legend .deep {
+  background: #dfb34b;
+}
+
+@media (max-width: 700px) {
+  .recent-sessions {
+    overflow-x: auto;
+  }
+
+  .sessions-table {
+    min-width: 750px;
+  }
+
+  .streak-days {
+    gap: 4px;
+  }
+}

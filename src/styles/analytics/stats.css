@@ -1,0 +1,23 @@
+.az-table{ width:100%; border-collapse:collapse; }
+.az-table th{
+  text-align:left; font-size:10.5px; letter-spacing:1px; text-transform:uppercase;
+  color:var(--az-text-low); font-weight:600; padding:0 10px 12px 10px;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.az-table td{
+  padding:14px 10px; font-size:13px; color:var(--az-text-mid);
+  border-bottom:1px solid rgba(255,255,255,0.045);
+}
+.az-table tr:last-child td{ border-bottom:none; }
+.az-table td.az-name{ color:var(--az-text-hi); font-weight:500; }
+.az-score-pill{
+  font-family:'JetBrains Mono',monospace; font-size:12px; padding:3px 10px;
+  border-radius:100px; display:inline-block;
+}
+.az-score-pill.high{ color:var(--az-green); background:rgba(127,191,140,0.1); border:1px solid rgba(127,191,140,0.3); }
+.az-score-pill.mid{ color:#D9B36C; background:rgba(217,179,108,0.1); border:1px solid rgba(217,179,108,0.3); }
+.az-score-pill.low{ color:var(--az-red); background:rgba(201,106,90,0.1); border:1px solid rgba(201,106,90,0.3); }
+.az-table-tag{
+  font-size:10.5px; padding:3px 9px; border-radius:6px;
+  background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); color:var(--az-text-mid);
+}
