@@ -1,0 +1,192 @@
+.action-plan {
+  padding-top: 5px;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.action-plan-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-bottom: 13px;
+}
+
+.action-plan-heading > div > span {
+  color: #65615a;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .8px;
+}
+
+.action-plan-heading h2 {
+  margin-top: 4px;
+
+  color: #e9e6df;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 19px;
+
+  font-weight: 500;
+}
+
+.action-plan-heading p {
+  max-width: 250px;
+
+  color: #6d6962;
+
+  font-size: 8px;
+
+  line-height: 1.5;
+
+  text-align: right;
+}
+
+
+/* =========================
+   RECOMMENDATIONS
+========================= */
+
+.recommendations {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.recommendation {
+  display: flex;
+
+  gap: 15px;
+
+  padding: 15px 17px;
+
+  border: 1px solid rgba(201,162,75,.10);
+
+  background: #121213;
+}
+
+.recommendation-number {
+  color: #5e5a53;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  padding-top: 2px;
+}
+
+.recommendation-content {
+  flex: 1;
+}
+
+
+/* =========================
+   TOP
+========================= */
+
+.recommendation-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.priority {
+  padding: 3px 6px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 6.5px;
+
+  letter-spacing: .4px;
+}
+
+.priority.high {
+  border: 1px solid rgba(200,117,85,.35);
+
+  color: #c87555;
+}
+
+.priority.medium {
+  border: 1px solid rgba(201,162,75,.35);
+
+  color: #c9a24b;
+}
+
+.priority.low {
+  border: 1px solid rgba(140,167,131,.35);
+
+  color: #8ca783;
+}
+
+.recommendation-time {
+  color: #67635c;
+
+  font-size: 7px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.recommendation h3 {
+  margin: 8px 0 5px;
+
+  color: #e9e6df;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.recommendation p {
+  max-width: 650px;
+
+  color: #77746d;
+
+  font-size: 8px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   ACTION
+========================= */
+
+.recommendation button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 10px;
+
+  padding: 6px 9px;
+
+  border: 1px solid rgba(201,162,75,.35);
+
+  color: #c9a24b;
+
+  font-size: 7.5px;
+}
+
+.recommendation button span {
+  font-size: 10px;
+}

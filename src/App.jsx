@@ -4,6 +4,10 @@ import Login from "./pages/login/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Interview from "./pages/interview/Interview";
 import Analytics from "./pages/analytics/Analytics";
+import MockHistory from "./pages/MockHistory/MockHistory";
+import AIInsights from "./pages/AIInsights/AIInsights";
+import Resources from "./pages/Resources/Resources";
+import Settings from "./pages/Settings/Settings";
 
 
 function ProtectedRoute({ children }) {
@@ -25,6 +29,7 @@ export default function App() {
       {/* =========================
           DEFAULT
       ========================= */}
+
       <Route
         path="/"
         element={<Navigate to="/login" replace />}
@@ -34,6 +39,7 @@ export default function App() {
       {/* =========================
           LOGIN
       ========================= */}
+
       <Route
         path="/login"
         element={<Login />}
@@ -43,6 +49,7 @@ export default function App() {
       {/* =========================
           DASHBOARD
       ========================= */}
+
       <Route
         path="/dashboard"
         element={
@@ -56,6 +63,7 @@ export default function App() {
       {/* =========================
           INTERVIEW
       ========================= */}
+
       <Route
         path="/interview"
         element={
@@ -69,6 +77,7 @@ export default function App() {
       {/* =========================
           ANALYTICS
       ========================= */}
+
       <Route
         path="/analytics"
         element={
@@ -80,8 +89,65 @@ export default function App() {
 
 
       {/* =========================
+          MOCK HISTORY
+      ========================= */}
+
+      <Route
+        path="/mock-history"
+        element={
+          <ProtectedRoute>
+            <MockHistory />
+          </ProtectedRoute>
+        }
+      />
+
+
+      {/* =========================
+          AI INSIGHTS
+      ========================= */}
+
+      <Route
+        path="/ai-insights"
+        element={
+          <ProtectedRoute>
+            <AIInsights />
+          </ProtectedRoute>
+        }
+      />
+
+
+      {/* =========================
+          RESOURCES
+      ========================= */}
+
+      <Route
+        path="/resources"
+        element={
+          <ProtectedRoute>
+            <Resources />
+          </ProtectedRoute>
+        }
+      />
+
+
+      {/* =========================
+          SETTINGS
+      ========================= */}
+
+      <Route
+        path="/settings"
+        element={
+          <ProtectedRoute>
+            <Settings />
+          </ProtectedRoute>
+        }
+      />
+
+
+      {/* =========================
           FALLBACK
       ========================= */}
+
       <Route
         path="*"
         element={<Navigate to="/login" replace />}

@@ -1,0 +1,165 @@
+.resource-card {
+  min-height: 218px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px 17px 13px;
+
+  border: 1px solid rgba(201, 162, 75, 0.11);
+
+  background: #121213;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.resource-card:hover {
+  border-color: rgba(201, 162, 75, 0.28);
+
+  transform: translateY(-2px);
+}
+
+
+/* TOP */
+
+.resource-card-top {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.resource-icon {
+  width: 37px;
+  height: 37px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(201, 162, 75, 0.23);
+
+  background: rgba(201, 162, 75, 0.045);
+
+  color: #c9a24b;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+}
+
+.resource-type {
+  padding: 4px 7px;
+
+  border: 1px solid rgba(201, 162, 75, 0.15);
+
+  color: #817c73;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 6.5px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* CONTENT */
+
+.resource-card-content {
+  flex: 1;
+
+  padding-top: 13px;
+}
+
+.resource-card-content h3 {
+  color: #e8e4dc;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  line-height: 1.25;
+}
+
+.resource-card-content p {
+  margin-top: 7px;
+
+  color: #77746d;
+
+  font-size: 9.5px;
+
+  line-height: 1.6;
+}
+
+.resource-topics {
+  display: block;
+
+  margin-top: 9px;
+
+  color: #a29d93;
+
+  font-size: 7.5px;
+}
+
+
+/* FOOTER */
+
+.resource-card-footer {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 11px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.045);
+}
+
+.resource-meta {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.resource-meta span {
+  color: #69655e;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 6.5px;
+}
+
+.resource-meta span:first-child {
+  color: #968f83;
+}
+
+
+/* BUTTON */
+
+.resource-card-footer button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 9px;
+
+  border: 1px solid rgba(201, 162, 75, 0.30);
+
+  color: #c9a24b;
+
+  font-size: 7.5px;
+}
+
+.resource-card-footer button:hover {
+  background: rgba(201, 162, 75, 0.07);
+}
+
+.resource-card-footer button span {
+  font-size: 10px;
+}

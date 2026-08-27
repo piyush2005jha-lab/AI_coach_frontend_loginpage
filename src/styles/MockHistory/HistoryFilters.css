@@ -1,0 +1,86 @@
+.history-filter-area {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 8px;
+}
+
+.history-tabs {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+}
+
+.history-tab {
+  position: relative;
+
+  padding: 7px 0;
+
+  color: #716e67;
+
+  font-size: 8.5px;
+}
+
+.history-tab.active {
+  color: #c9a24b;
+}
+
+.history-tab.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 1px;
+
+  background: #c9a24b;
+}
+
+.history-filter-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.history-select {
+  width: 112px;
+  height: 26px;
+
+  border: 1px solid rgba(201, 162, 75, 0.12);
+
+  background: #131314;
+}
+
+.history-select select {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 8px;
+
+  color: #8d8981;
+
+  font-size: 8px;
+
+  background: transparent;
+}
+
+.history-filter-button {
+  width: 26px;
+  height: 26px;
+
+  border: 1px solid rgba(201, 162, 75, 0.12);
+
+  color: #77736b;
+
+  font-size: 10px;
+}

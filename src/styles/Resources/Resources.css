@@ -1,0 +1,449 @@
+.resources-page {
+  min-height: 100vh;
+  background: #111112;
+}
+
+.resources-main {
+  width: calc(100% - 194px);
+  min-height: 100vh;
+  margin-left: 194px;
+  background: #111112;
+}
+
+
+/* TOP BAR */
+
+.resources-topbar {
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 25px;
+
+  border-bottom: 1px solid rgba(201, 162, 75, 0.08);
+}
+
+.resources-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.resources-bell {
+  color: #c9a24b;
+  font-size: 16px;
+}
+
+.resources-streak {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resources-streak span {
+  color: #67645d;
+  font-size: 9px;
+}
+
+.resources-streak strong {
+  color: #c9a24b;
+  font-size: 11px;
+}
+
+
+/* CONTENT */
+
+.resources-content {
+  padding: 18px 18px 40px;
+}
+
+
+/* HEADER */
+
+.resources-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid rgba(201, 162, 75, 0.09);
+}
+
+.resources-header h1 {
+  color: #f0eee7;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 31px;
+  font-weight: 500;
+
+  margin-bottom: 6px;
+}
+
+.resources-header p {
+  color: #77736c;
+  font-size: 11px;
+}
+
+
+/* SEARCH */
+
+.resources-search {
+  width: 250px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 0 12px;
+
+  border: 1px solid rgba(201, 162, 75, 0.16);
+
+  background: #121213;
+}
+
+.resources-search span {
+  color: #716d65;
+  font-size: 16px;
+}
+
+.resources-search input {
+  width: 100%;
+
+  background: transparent;
+
+  color: #ddd8cf;
+
+  font-size: 10px;
+}
+
+.resources-search input::placeholder {
+  color: #625f59;
+}
+
+
+/* FEATURED */
+
+.featured-resource {
+  min-height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 13px;
+
+  padding: 20px 24px;
+
+  border: 1px solid rgba(201, 162, 75, 0.16);
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(201, 162, 75, 0.065),
+      rgba(201, 162, 75, 0.012)
+    );
+}
+
+.featured-content {
+  max-width: 720px;
+}
+
+.featured-label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #c9a24b;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 1px;
+}
+
+.featured-content h2 {
+  color: #eeeae2;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  margin-bottom: 7px;
+}
+
+.featured-content p {
+  color: #77746d;
+
+  max-width: 650px;
+
+  font-size: 9.5px;
+
+  line-height: 1.6;
+}
+
+.featured-tags {
+  display: flex;
+  gap: 8px;
+
+  margin-top: 11px;
+}
+
+.featured-tags span {
+  padding: 5px 9px;
+
+  border: 1px solid rgba(201, 162, 75, 0.18);
+
+  color: #99938a;
+
+  font-size: 7px;
+}
+
+
+/* PROGRESS */
+
+.featured-progress {
+  width: 135px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.progress-ring {
+  position: relative;
+
+  width: 82px;
+  height: 82px;
+}
+
+.progress-ring svg {
+  width: 100%;
+  height: 100%;
+
+  transform: rotate(-90deg);
+}
+
+.progress-ring circle {
+  fill: none;
+  stroke-width: 4;
+}
+
+.ring-background {
+  stroke: #292824;
+}
+
+.ring-progress {
+  stroke: #c9a24b;
+
+  stroke-linecap: round;
+}
+
+.progress-ring strong {
+  position: absolute;
+
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  color: #eeeae2;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 19px;
+}
+
+.featured-progress > span {
+  color: #68645d;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 6px;
+
+  letter-spacing: 0.7px;
+}
+
+
+/* LIBRARY */
+
+.resources-library-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin: 16px 0 10px;
+}
+
+.resources-library-header > div > span {
+  color: #65615a;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.8px;
+}
+
+.resources-library-header h2 {
+  color: #e9e6df;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  margin-top: 4px;
+}
+
+.resource-total {
+  color: #68645d;
+  font-size: 8px;
+}
+
+
+/* GRID */
+
+.resources-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+
+/* EMPTY */
+
+.resources-empty {
+  min-height: 190px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(201, 162, 75, 0.10);
+}
+
+.resources-empty span {
+  color: #c9a24b;
+  font-size: 22px;
+}
+
+.resources-empty h3 {
+  margin-top: 8px;
+
+  color: #ddd8cf;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 17px;
+}
+
+.resources-empty p {
+  margin-top: 4px;
+
+  color: #6e6a63;
+
+  font-size: 9px;
+}
+
+
+@media (max-width: 1000px) {
+
+  .resources-main {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .resources-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .resources-search {
+    width: 100%;
+  }
+
+  .featured-resource {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================================
+   FINAL RESOURCE PAGE LAYOUT FIX
+========================================= */
+
+.resources-content {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* CATEGORY AREA MUST STAY COMPACT */
+
+.resources-content .resource-categories {
+  height: 46px !important;
+  min-height: 46px !important;
+
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+}
+
+
+/* LIBRARY SHOULD COME IMMEDIATELY AFTER TABS */
+
+.resources-library-header {
+  margin-top: 16px !important;
+}
+
+
+/* KEEP RESOURCE GRID NORMAL */
+
+.resources-grid {
+  width: 100%;
+
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr)) !important;
+
+  gap: 10px !important;
+}
+
+
+/* CARD SIZE */
+
+.resource-card {
+  min-height: 218px !important;
+}

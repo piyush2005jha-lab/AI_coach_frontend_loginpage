@@ -1,0 +1,354 @@
+.history-table-wrapper {
+  width: 100%;
+
+  border: 1px solid rgba(201, 162, 75, 0.10);
+
+  background: #121213;
+
+  overflow: hidden;
+}
+
+.history-table-head,
+.history-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(220px, 2.1fr)
+    minmax(75px, .8fr)
+    minmax(105px, 1fr)
+    minmax(80px, .75fr)
+    minmax(105px, .9fr)
+    minmax(120px, 1fr);
+
+  align-items: center;
+}
+
+.history-table-head {
+  min-height: 27px;
+
+  padding: 0 9px;
+
+  border-bottom: 1px solid rgba(201, 162, 75, 0.10);
+
+  color: #5f5c56;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .8px;
+}
+
+.history-row {
+  min-height: 58px;
+
+  padding: 0 9px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.045);
+}
+
+.history-row:last-child {
+  border-bottom: none;
+}
+
+.history-row:hover {
+  background: rgba(201, 162, 75, 0.025);
+}
+
+
+/* =========================
+   MOCK
+========================= */
+
+.mock-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  min-width: 0;
+}
+
+.mock-icon {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(201, 162, 75, 0.12);
+
+  background: #191919;
+
+  color: #c9a24b;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+}
+
+.mock-icon.excellent,
+.mock-icon.good {
+  color: #8ca783;
+}
+
+.mock-icon.average {
+  color: #c9a24b;
+}
+
+.mock-icon.low {
+  color: #c87555;
+}
+
+.mock-title {
+  margin-bottom: 3px;
+
+  color: #e9e6df;
+
+  font-size: 9.5px;
+
+  font-weight: 500;
+}
+
+.mock-topics {
+  color: #69665f;
+
+  font-size: 7px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================
+   ROLE
+========================= */
+
+.role-badge {
+  display: inline-flex;
+
+  padding: 3px 6px;
+
+  border: 1px solid rgba(201, 162, 75, 0.35);
+
+  background: rgba(201, 162, 75, 0.04);
+
+  color: #c9a24b;
+
+  font-size: 7px;
+}
+
+.role-badge.full-stack {
+  color: #96a68e;
+
+  border-color: #394737;
+}
+
+.role-badge.backend {
+  color: #c99c4b;
+}
+
+.role-badge.dsa {
+  color: #cb7655;
+
+  border-color: #533227;
+}
+
+.role-badge.system-design {
+  color: #9ba68e;
+
+  border-color: #3c4635;
+}
+
+
+/* =========================
+   SCORE
+========================= */
+
+.score-wrapper {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.score-ring {
+  width: 30px;
+  height: 30px;
+
+  position: relative;
+}
+
+.score-ring svg {
+  width: 100%;
+  height: 100%;
+
+  transform: rotate(-90deg);
+}
+
+.score-ring circle {
+  fill: none;
+
+  stroke-width: 3;
+}
+
+.score-ring-bg {
+  stroke: #2d2c29;
+}
+
+.score-ring-progress {
+  stroke-linecap: round;
+
+  stroke-dasharray: 113;
+
+  transition: stroke-dashoffset .3s ease;
+}
+
+.score-ring.excellent .score-ring-progress,
+.score-ring.good .score-ring-progress {
+  stroke: #8ca783;
+}
+
+.score-ring.average .score-ring-progress {
+  stroke: #c9a24b;
+}
+
+.score-ring.low .score-ring-progress {
+  stroke: #c87555;
+}
+
+.score-ring span {
+  position: absolute;
+
+  inset: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  color: #ece9e2;
+
+  font-size: 7px;
+}
+
+.score-text {
+  font-size: 7px;
+}
+
+.score-text.excellent,
+.score-text.good {
+  color: #8ca783;
+}
+
+.score-text.average {
+  color: #c9a24b;
+}
+
+.score-text.low {
+  color: #c87555;
+}
+
+
+/* =========================
+   DURATION
+========================= */
+
+.duration {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #aaa69e;
+
+  font-size: 8px;
+}
+
+.duration span {
+  color: #716e67;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.date {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.date strong {
+  color: #bdb9b1;
+
+  font-size: 8px;
+
+  font-weight: 400;
+}
+
+.date span {
+  color: #66635d;
+
+  font-size: 7px;
+}
+
+
+/* =========================
+   ACTION
+========================= */
+
+.history-action {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.history-action button:first-child {
+  height: 25px;
+
+  padding: 0 10px;
+
+  border: 1px solid rgba(201, 162, 75, 0.45);
+
+  background: transparent;
+
+  color: #c9a24b;
+
+  font-size: 7px;
+}
+
+.more-button {
+  color: #77736b;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   TABLE RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .history-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .history-table-head,
+  .history-row {
+    min-width: 760px;
+  }
+}

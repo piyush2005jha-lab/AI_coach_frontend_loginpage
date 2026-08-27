@@ -1,0 +1,229 @@
+.ai-insights-shell {
+  width: 100%;
+  min-height: 100vh;
+  background: #111112;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.ai-insights-main {
+  margin-left: 194px;
+
+  width: calc(100% - 194px);
+
+  min-height: 100vh;
+
+  background: #111112;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.ai-insights-topbar {
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 25px;
+
+  border-bottom: 1px solid rgba(201, 162, 75, 0.08);
+}
+
+.ai-insights-topbar-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+}
+
+.ai-notification {
+  position: relative;
+
+  color: #c9a24b;
+
+  font-size: 17px;
+}
+
+.ai-notification span {
+  position: absolute;
+
+  top: 0;
+  right: -1px;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #c9a24b;
+}
+
+.ai-streak {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.ai-streak span {
+  color: #67655e;
+
+  font-size: 9.5px;
+}
+
+.ai-streak strong {
+  color: #c9a24b;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.ai-insights-content {
+  padding: 15px 18px 25px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.ai-insights-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid rgba(201, 162, 75, 0.09);
+}
+
+.ai-title-block h1 {
+  margin: 0 0 6px;
+
+  color: #f3f1ea;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 28px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.01em;
+}
+
+.ai-title-block p {
+  color: #77746d;
+
+  font-size: 10px;
+}
+
+.ai-updated {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 4px;
+}
+
+.ai-updated span {
+  color: #6b675f;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .8px;
+}
+
+.ai-updated strong {
+  color: #c9a24b;
+
+  font-size: 9px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.ai-insights-tabs {
+  display: flex;
+
+  align-items: center;
+
+  gap: 23px;
+
+  margin: 10px 0 8px;
+
+  border-bottom: 1px solid rgba(201, 162, 75, 0.08);
+}
+
+.ai-insights-tabs button {
+  position: relative;
+
+  padding: 7px 0 8px;
+
+  color: #716e67;
+
+  font-size: 9.5px;
+}
+
+.ai-insights-tabs button.active {
+  color: #c9a24b;
+}
+
+.ai-insights-tabs button.active::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 1px;
+
+  background: #c9a24b;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .ai-insights-main {
+    margin-left: 0;
+
+    width: 100%;
+  }
+
+  .ai-insights-header {
+    gap: 15px;
+  }
+
+}

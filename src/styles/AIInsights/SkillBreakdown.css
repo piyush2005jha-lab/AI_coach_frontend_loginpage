@@ -1,0 +1,206 @@
+.skill-breakdown {
+  padding-top: 5px;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.skill-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-bottom: 13px;
+}
+
+.skill-heading > div > span {
+  color: #65615a;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .8px;
+}
+
+.skill-heading h2 {
+  margin-top: 4px;
+
+  color: #e9e6df;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 19px;
+
+  font-weight: 500;
+}
+
+.skill-heading p {
+  color: #6d6962;
+
+  font-size: 8px;
+}
+
+
+/* =========================
+   SKILL GRID
+========================= */
+
+.skill-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 9px;
+}
+
+.skill-card {
+  padding: 14px 16px;
+
+  border: 1px solid rgba(201, 162, 75, 0.10);
+
+  background: #121213;
+}
+
+.skill-card-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+}
+
+.skill-card-top h3 {
+  color: #e7e3db;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+.skill-card-top span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #6d6962;
+
+  font-size: 8px;
+}
+
+.skill-card-top > strong {
+  color: #c9a24b;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   BAR
+========================= */
+
+.skill-bar {
+  height: 4px;
+
+  margin: 13px 0 8px;
+
+  background: #292824;
+}
+
+.skill-bar-fill {
+  height: 100%;
+}
+
+.skill-bar-fill.excellent,
+.skill-bar-fill.good {
+  background: #8ca783;
+}
+
+.skill-bar-fill.average {
+  background: #c9a24b;
+}
+
+.skill-bar-fill.weak {
+  background: #c87555;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.skill-card-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #5f5c56;
+
+  font-size: 7px;
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.skill-summary {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  margin-top: 10px;
+
+  border: 1px solid rgba(201,162,75,.10);
+
+  background: #121213;
+}
+
+.skill-summary div {
+  padding: 13px 16px;
+
+  border-right: 1px solid rgba(201,162,75,.08);
+}
+
+.skill-summary div:last-child {
+  border-right: none;
+}
+
+.skill-summary span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #65615a;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+}
+
+.skill-summary strong {
+  color: #c9a24b;
+
+  font-size: 9px;
+}
+
+
+@media (max-width: 700px) {
+
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-summary {
+    grid-template-columns: 1fr;
+  }
+
+}

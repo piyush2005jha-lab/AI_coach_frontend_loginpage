@@ -1,0 +1,1129 @@
+.insight-overview {
+  width: 100%;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.ai-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 14px;
+
+  border-bottom: 1px solid rgba(201, 162, 75, 0.08);
+}
+
+.ai-stat {
+  min-height: 67px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 18px;
+
+  border-right: 1px solid rgba(201, 162, 75, 0.08);
+}
+
+.ai-stat:first-child {
+  padding-left: 0;
+}
+
+.ai-stat:last-child {
+  border-right: none;
+}
+
+.ai-stat-icon {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(201, 162, 75, 0.32);
+
+  background: rgba(201, 162, 75, 0.06);
+
+  color: #c9a24b;
+
+  font-size: 11px;
+}
+
+.ai-stat-label {
+  margin-bottom: 4px;
+
+  color: #67645d;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: .8px;
+}
+
+.ai-stat-value {
+  color: #f3f1ea;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 20px;
+
+  line-height: 1;
+}
+
+.ai-stat-change {
+  margin-top: 4px;
+
+  color: #c9a24b;
+
+  font-size: 8px;
+}
+
+.ai-stat-change.good {
+  color: #8ca783;
+}
+
+.ai-stat-change.warning {
+  color: #c87555;
+}
+
+
+/* =========================================
+   MAIN GRID
+========================================= */
+
+.ai-overview-grid {
+
+  display: grid;
+
+  /*
+    LEFT:
+    readiness + skill
+
+    RIGHT:
+    strengths + weaknesses
+    + action plan
+  */
+
+  grid-template-columns:
+    minmax(0, 1.55fr)
+    minmax(0, .85fr)
+    minmax(0, .85fr);
+
+  grid-template-rows:
+    174px
+    228px;
+
+  gap: 8px;
+
+  margin-top: 8px;
+}
+
+
+/* =========================================
+   READINESS
+========================================= */
+
+.readiness-card {
+
+  grid-column: 1;
+
+  grid-row: 1;
+
+  min-width: 0;
+
+  border: 1px solid rgba(201, 162, 75, 0.10);
+
+  background: #121213;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   STRENGTHS
+========================================= */
+
+.insight-list-card:nth-of-type(2) {
+
+  grid-column: 2;
+
+  grid-row: 1;
+
+}
+
+
+/* =========================================
+   WEAKNESSES
+========================================= */
+
+.insight-list-card:nth-of-type(3) {
+
+  grid-column: 3;
+
+  grid-row: 1;
+
+}
+
+
+/* =========================================
+   MINI SKILL
+========================================= */
+
+.overview-skill-card {
+
+  grid-column: 1;
+
+  grid-row: 2;
+
+  min-width: 0;
+
+  border: 1px solid rgba(201, 162, 75, 0.10);
+
+  background: #121213;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MINI ACTION
+========================================= */
+
+.overview-action-card {
+
+  grid-column: 2 / 4;
+
+  grid-row: 2;
+
+  min-width: 0;
+
+  border: 1px solid rgba(201, 162, 75, 0.10);
+
+  background: #121213;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CARD HEADING
+========================================= */
+
+.ai-card-heading {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  padding: 13px 15px 0;
+}
+
+.ai-card-heading > div > span {
+
+  color: #65615a;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .8px;
+}
+
+.ai-card-heading h2 {
+
+  margin-top: 4px;
+
+  color: #e9e6df;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+.ai-card-heading > strong {
+
+  color: #c9a24b;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+}
+
+
+/* =========================================
+   READINESS BODY
+========================================= */
+
+.readiness-body {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 10px 16px 15px;
+}
+
+.large-readiness-ring {
+
+  position: relative;
+
+  width: 91px;
+  height: 91px;
+
+  flex-shrink: 0;
+}
+
+.large-readiness-ring svg {
+
+  width: 100%;
+  height: 100%;
+
+  transform: rotate(-90deg);
+}
+
+.large-readiness-ring circle {
+
+  fill: none;
+
+  stroke-width: 4;
+}
+
+.ring-background {
+
+  stroke: #292824;
+}
+
+.ring-progress {
+
+  stroke: #c9a24b;
+
+  stroke-linecap: round;
+}
+
+.large-readiness-ring > div {
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.large-readiness-ring strong {
+
+  color: #f3f1ea;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 21px;
+}
+
+.large-readiness-ring span {
+
+  margin-top: 1px;
+
+  color: #6c6861;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 6px;
+}
+
+.readiness-copy {
+
+  min-width: 0;
+}
+
+.readiness-copy h3 {
+
+  margin-bottom: 6px;
+
+  color: #eeeae2;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.readiness-copy p {
+
+  max-width: 310px;
+
+  color: #77746d;
+
+  font-size: 8px;
+
+  line-height: 1.55;
+}
+
+.readiness-improvement {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 8px;
+}
+
+.readiness-improvement strong {
+
+  color: #8ca783;
+
+  font-size: 8px;
+}
+
+.readiness-improvement span {
+
+  color: #65625c;
+
+  font-size: 7px;
+}
+
+
+/* =========================================
+   STRENGTH / WEAKNESS LIST
+========================================= */
+
+.insight-list {
+
+  padding: 5px 15px 8px;
+}
+
+.insight-list-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  min-height: 34px;
+
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+
+.insight-list-item:last-child {
+
+  border-bottom: none;
+}
+
+.insight-list-item > span {
+
+  color: #625e57;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 6.5px;
+}
+
+.insight-list-item p {
+
+  color: #aaa69e;
+
+  font-size: 8px;
+}
+
+.positive-mark {
+
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(140,167,131,.08);
+
+  color: #8ca783;
+
+  font-size: 16px;
+}
+
+.warning-mark {
+
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(200,117,85,.08);
+
+  color: #c87555;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   MINI HEADINGS
+========================================= */
+
+.mini-heading {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  padding: 12px 15px 7px;
+}
+
+.mini-heading > div > span {
+
+  color: #65615a;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 6.5px;
+
+  letter-spacing: .8px;
+}
+
+.mini-heading h2 {
+
+  margin-top: 3px;
+
+  color: #e9e6df;
+
+  font-family: "Fraunces", serif;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+.mini-heading-side {
+
+  color: #6d6962;
+
+  font-size: 7px;
+}
+
+
+/* =========================================
+   MINI SKILLS
+========================================= */
+
+.mini-skills {
+
+  padding: 0 15px 10px;
+}
+
+.mini-skill {
+
+  display: grid;
+
+  grid-template-columns: 94px 1fr 28px;
+
+  align-items: center;
+
+  gap: 7px;
+
+  height: 25px;
+}
+
+.mini-skill-name {
+
+  color: #aaa69e;
+
+  font-size: 7.5px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.mini-bar {
+
+  height: 4px;
+
+  background: #292824;
+
+  overflow: hidden;
+}
+
+.mini-bar-fill {
+
+  height: 100%;
+}
+
+.mini-bar-fill.excellent,
+.mini-bar-fill.good {
+
+  background: #8ca783;
+}
+
+.mini-bar-fill.average {
+
+  background: #c9a24b;
+}
+
+.mini-bar-fill.weak {
+
+  background: #c87555;
+}
+
+.mini-skill strong {
+
+  color: #d8d4cc;
+
+  font-size: 7.5px;
+
+  text-align: right;
+}
+
+
+/* =========================================
+   MINI ACTIONS
+========================================= */
+
+.mini-actions {
+
+  padding: 0 15px 8px;
+}
+
+.mini-action {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-height: 48px;
+
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+
+.mini-action:last-child {
+
+  border-bottom: none;
+}
+
+.mini-action > span {
+
+  color: #625e57;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  width: 18px;
+}
+
+.mini-action strong {
+
+  display: block;
+
+  color: #e1ddd5;
+
+  font-size: 8.5px;
+
+  font-weight: 500;
+}
+
+.mini-action p {
+
+  margin-top: 3px;
+
+  color: #77746d;
+
+  font-size: 7px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+  .ai-overview-grid {
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: auto;
+
+  }
+
+  .readiness-card {
+    grid-column: 1 / 3;
+    grid-row: auto;
+  }
+
+  .insight-list-card:nth-of-type(2),
+  .insight-list-card:nth-of-type(3) {
+
+    grid-column: auto;
+    grid-row: auto;
+
+  }
+
+  .overview-skill-card,
+  .overview-action-card {
+
+    grid-column: 1 / 3;
+
+    grid-row: auto;
+
+  }
+
+}
+/* =========================================
+   FONT SIZE OVERRIDE
+========================================= */
+
+.ai-title-block h1 {
+  font-size: 32px;
+}
+
+.ai-title-block p {
+  font-size: 12px;
+}
+
+.ai-stat-label {
+  font-size: 9px;
+}
+
+.ai-stat-value {
+  font-size: 23px;
+}
+
+.ai-stat-change {
+  font-size: 9px;
+}
+
+.ai-insights-tabs button {
+  font-size: 11px;
+}
+
+.ai-card-heading > div > span {
+  font-size: 8px;
+}
+
+.ai-card-heading h2 {
+  font-size: 19px;
+}
+
+.large-readiness-ring strong {
+  font-size: 24px;
+}
+
+.large-readiness-ring span {
+  font-size: 7px;
+}
+
+.readiness-copy h3 {
+  font-size: 17px;
+}
+
+.readiness-copy p {
+  font-size: 10px;
+}
+
+.readiness-improvement strong {
+  font-size: 9px;
+}
+
+.readiness-improvement span {
+  font-size: 8px;
+}
+
+.insight-list-item > span {
+  font-size: 7.5px;
+}
+
+.insight-list-item p {
+  font-size: 10px;
+}
+
+.mini-heading > div > span {
+  font-size: 7.5px;
+}
+
+.mini-heading h2 {
+  font-size: 17px;
+}
+
+.mini-heading-side {
+  font-size: 8px;
+}
+
+.mini-skill-name {
+  font-size: 9px;
+}
+
+.mini-skill strong {
+  font-size: 9px;
+}
+
+.mini-action strong {
+  font-size: 10px;
+}
+
+.mini-action p {
+  font-size: 8px;
+}
+
+.mini-action > span {
+  font-size: 8px;
+}
+/* =====================================================
+   FINAL AI INSIGHTS LAYOUT FIX
+===================================================== */
+
+
+/* =====================================================
+   STATS - BIGGER
+===================================================== */
+
+.ai-stats {
+  margin-top: 15px;
+  min-height: 78px;
+}
+
+.ai-stat {
+  min-height: 78px;
+  padding: 0 22px;
+}
+
+.ai-stat:first-child {
+  padding-left: 0;
+}
+
+.ai-stat-icon {
+  width: 38px;
+  height: 38px;
+  font-size: 13px;
+}
+
+.ai-stat-label {
+  font-size: 9px;
+  margin-bottom: 5px;
+}
+
+.ai-stat-value {
+  font-size: 25px;
+}
+
+.ai-stat-change {
+  font-size: 9px;
+  margin-top: 5px;
+}
+
+
+/* =====================================================
+   ONLY ONE TAB BAR
+===================================================== */
+
+.ai-insights-tabs {
+  margin-top: 12px;
+  margin-bottom: 10px;
+
+  height: 38px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 27px;
+}
+
+.ai-insights-tabs button {
+  padding: 7px 0 10px;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   BIGGER CARD GRID
+===================================================== */
+
+.ai-overview-grid {
+
+  grid-template-columns:
+    minmax(0, 1.55fr)
+    minmax(0, .85fr)
+    minmax(0, .85fr);
+
+  /*
+     Previously:
+     174px / 228px
+
+     Now cards occupy much more
+     of the available screen.
+  */
+
+  grid-template-rows:
+    205px
+    255px;
+
+  gap: 10px;
+
+  margin-top: 8px;
+}
+
+
+/* =====================================================
+   CARD HEADING
+===================================================== */
+
+.ai-card-heading {
+  padding: 17px 18px 0;
+}
+
+.ai-card-heading > div > span {
+  font-size: 8px;
+}
+
+.ai-card-heading h2 {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.ai-card-heading > strong {
+  font-size: 8px;
+}
+
+
+/* =====================================================
+   READINESS CARD
+===================================================== */
+
+.readiness-body {
+
+  gap: 27px;
+
+  padding: 16px 20px 20px;
+}
+
+.large-readiness-ring {
+
+  width: 108px;
+  height: 108px;
+}
+
+.large-readiness-ring strong {
+  font-size: 25px;
+}
+
+.large-readiness-ring span {
+  font-size: 7px;
+}
+
+.readiness-copy h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.readiness-copy p {
+  max-width: 390px;
+
+  font-size: 10px;
+
+  line-height: 1.65;
+}
+
+.readiness-improvement {
+  margin-top: 10px;
+}
+
+.readiness-improvement strong {
+  font-size: 10px;
+}
+
+.readiness-improvement span {
+  font-size: 8px;
+}
+
+
+/* =====================================================
+   STRENGTH / WEAKNESS
+===================================================== */
+
+.insight-list {
+  padding: 8px 18px 12px;
+}
+
+.insight-list-item {
+
+  min-height: 45px;
+
+  gap: 10px;
+}
+
+.insight-list-item > span {
+  font-size: 7.5px;
+}
+
+.insight-list-item p {
+  font-size: 10px;
+}
+
+.positive-mark,
+.warning-mark {
+
+  width: 31px;
+  height: 31px;
+
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   BOTTOM SKILL CARD
+===================================================== */
+
+.overview-skill-card {
+  min-height: 255px;
+}
+
+.mini-heading {
+  padding: 17px 18px 10px;
+}
+
+.mini-heading > div > span {
+  font-size: 8px;
+}
+
+.mini-heading h2 {
+  font-size: 19px;
+}
+
+.mini-heading-side {
+  font-size: 8px;
+}
+
+
+/* =====================================================
+   SKILL ROWS
+===================================================== */
+
+.mini-skills {
+  padding: 2px 18px 15px;
+}
+
+.mini-skill {
+
+  grid-template-columns:
+    125px
+    1fr
+    35px;
+
+  gap: 10px;
+
+  height: 34px;
+}
+
+.mini-skill-name {
+  font-size: 9px;
+}
+
+.mini-skill strong {
+  font-size: 9px;
+}
+
+.mini-bar {
+  height: 5px;
+}
+
+
+/* =====================================================
+   ACTION PLAN CARD
+===================================================== */
+
+.overview-action-card {
+  min-height: 255px;
+}
+
+.mini-actions {
+  padding: 2px 18px 12px;
+}
+
+.mini-action {
+
+  min-height: 65px;
+
+  gap: 13px;
+}
+
+.mini-action > span {
+  width: 23px;
+
+  font-size: 8px;
+}
+
+.mini-action strong {
+  font-size: 10.5px;
+}
+
+.mini-action p {
+  margin-top: 4px;
+
+  font-size: 8.5px;
+}
+
+
+/* =====================================================
+   REMOVE ANY SECOND TABS BAR
+===================================================== */
+
+/*
+   If an old duplicate tabs element still exists
+   somewhere outside the overview, hide it.
+*/
+
+.ai-insights-content > .ai-insights-tabs {
+  display: none;
+}
+
+
+/*
+   The actual tabs inside InsightOverview
+   remain visible.
+*/
+
+.insight-overview > .ai-insights-tabs {
+  display: flex;
+}
+
+
+/* =====================================================
+   MORE SCREEN FILL
+===================================================== */
+
+.ai-insights-content {
+  padding-bottom: 45px;
+}
