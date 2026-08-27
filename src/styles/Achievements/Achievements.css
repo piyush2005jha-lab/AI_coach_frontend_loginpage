@@ -1,0 +1,1410 @@
+/* =========================================================
+   ACHIEVEMENTS PAGE
+========================================================= */
+
+.achievements-page {
+  min-height: 100vh;
+  background: #101010;
+  color: #f4f1ea;
+  display: flex;
+
+  /* IMPORTANT:
+     page itself won't scroll,
+     main content will scroll */
+  overflow: hidden;
+
+  font-family: "Inter", sans-serif;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.achievements-sidebar {
+  width: 218px;
+  min-width: 218px;
+
+  height: 100vh;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background: #111111;
+
+  border-right: 1px solid #29251d;
+
+  padding: 25px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 100;
+}
+
+
+/* =========================================================
+   SIDEBAR LOGO
+========================================================= */
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  margin-bottom: 31px;
+}
+
+.logo-box {
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #b88a24;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #d5a735;
+
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+
+.sidebar-logo span {
+  font-family: Georgia, serif;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SIDEBAR PROFILE
+========================================================= */
+
+.sidebar-profile {
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #2a2722;
+}
+
+.sidebar-profile h3 {
+  font-family: Georgia, serif;
+
+  font-size: 15px;
+
+  margin-bottom: 5px;
+}
+
+.sidebar-profile p {
+  color: #77736c;
+
+  font-size: 10px;
+
+  margin-bottom: 10px;
+}
+
+.pro-member {
+  color: #d3a22e;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SIDEBAR NAV
+========================================================= */
+
+.sidebar-nav {
+  margin-top: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.sidebar-link {
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 7px;
+
+  color: #aaa69f;
+
+  font-size: 12px;
+
+  border-left: 2px solid transparent;
+
+  transition: 0.2s ease;
+}
+
+.sidebar-link:hover {
+  color: #eeeeee;
+}
+
+.sidebar-link.active {
+  color: #f1eee7;
+
+  border-left-color: #d6a52e;
+
+  font-weight: 600;
+
+  background: rgba(214, 165, 46, 0.04);
+}
+
+.nav-icon {
+  width: 12px;
+
+  font-size: 9px;
+
+  color: #77736c;
+}
+
+.sidebar-link.active .nav-icon {
+  color: #d6a52e;
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+========================================================= */
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.upgrade-text {
+  border-top: 1px solid #29251d;
+
+  padding-top: 19px;
+
+  margin-bottom: 12px;
+
+  color: #706d67;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+.upgrade-button {
+  width: 100%;
+
+  height: 32px;
+
+  border: 1px solid #bd9028;
+
+  color: #d4a52e;
+
+  font-size: 9px;
+
+  letter-spacing: 0.5px;
+
+  background: transparent;
+}
+
+.upgrade-button:hover {
+  background: rgba(214, 165, 46, 0.06);
+}
+
+.sidebar-user {
+  margin-top: 20px;
+
+  border: 1px solid #292929;
+
+  padding: 11px 9px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.user-avatar {
+  width: 29px;
+  height: 29px;
+
+  border-radius: 50%;
+
+  background: #292929;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 9px;
+
+  color: #aaa;
+}
+
+.sidebar-user div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.sidebar-user strong {
+  font-size: 10px;
+}
+
+.sidebar-user span {
+  font-size: 8px;
+
+  color: #6d6a65;
+
+  margin-top: 2px;
+}
+
+.user-arrow {
+  margin-left: auto;
+
+  color: #777;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.achievements-main {
+  margin-left: 218px;
+
+  width: calc(100% - 218px);
+
+  /* IMPORTANT */
+  height: 100vh;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: #101010;
+
+  /* Firefox scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #66501f #0d0d0d;
+}
+
+
+/* =========================================================
+   MAIN SCROLLBAR
+========================================================= */
+
+.achievements-main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.achievements-main::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+.achievements-main::-webkit-scrollbar-thumb {
+  background: #66501f;
+
+  border-radius: 10px;
+
+  border: 1px solid #151515;
+}
+
+.achievements-main::-webkit-scrollbar-thumb:hover {
+  background: #b58a28;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.achievements-topbar {
+  height: 55px;
+
+  border-bottom: 1px solid #25231f;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+
+  position: sticky;
+  top: 0;
+
+  background: #101010;
+
+  z-index: 10;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  font-size: 11px;
+}
+
+.notification {
+  color: #d4a52e;
+
+  font-size: 16px;
+
+  position: relative;
+}
+
+.notification::after {
+  content: "";
+
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #e96b48;
+
+  right: -2px;
+  top: -1px;
+}
+
+.streak-label {
+  color: #6d6962;
+}
+
+.top-right strong {
+  color: #d8a62d;
+}
+
+
+/* =========================================================
+   CONTENT WRAPPER
+========================================================= */
+
+.achievements-content {
+  padding: 39px 42px 70px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid #292620;
+}
+
+.page-header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 38px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: #8b8780;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   PROGRESS CARD
+========================================================= */
+
+.achievement-progress {
+  height: 205px;
+
+  margin-top: 22px;
+
+  border: 1px solid #66501f;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(91, 69, 24, 0.15),
+      rgba(20, 20, 18, 0.25)
+    );
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 30px 45px;
+}
+
+
+/* =========================================================
+   ADVANCED TROPHY
+========================================================= */
+
+.progress-trophy {
+  width: 230px;
+  min-width: 230px;
+
+  height: 170px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* OUTER GLOW */
+
+.progress-trophy::before {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(214, 165, 46, 0.16) 0%,
+      rgba(214, 165, 46, 0.06) 42%,
+      transparent 70%
+    );
+
+  filter: blur(2px);
+
+  z-index: 0;
+}
+
+
+/* OUTER RING */
+
+.progress-trophy::after {
+  content: "";
+
+  position: absolute;
+
+  width: 132px;
+  height: 132px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(214, 165, 46, 0.28);
+
+  box-shadow:
+    0 0 0 7px rgba(214, 165, 46, 0.025),
+    0 0 30px rgba(214, 165, 46, 0.10);
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   TROPHY CENTER
+========================================================= */
+
+.trophy-ring {
+  width: 112px;
+  height: 112px;
+
+  position: relative;
+
+  z-index: 2;
+
+  border-radius: 50%;
+
+  border: 1px solid #d6a52e;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(214, 165, 46, 0.13),
+      rgba(18, 17, 14, 0.96) 68%
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 47px;
+
+  color: #f0bd45;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.8),
+    0 0 14px rgba(214, 165, 46, 0.35);
+
+  box-shadow:
+    inset 0 0 22px rgba(214, 165, 46, 0.08),
+    0 0 20px rgba(214, 165, 46, 0.12);
+}
+
+
+/* =========================================================
+   INNER GOLD RING
+========================================================= */
+
+.trophy-ring::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border-radius: 50%;
+
+  border: 1px dashed rgba(214, 165, 46, 0.32);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TROPHY BASE SHADOW
+========================================================= */
+
+.trophy-ring::after {
+  content: "";
+
+  position: absolute;
+
+  width: 42px;
+  height: 5px;
+
+  bottom: 14px;
+
+  border-radius: 50%;
+
+  background: rgba(214, 165, 46, 0.18);
+
+  filter: blur(4px);
+}
+
+
+/* =========================================================
+   SPARKLES
+========================================================= */
+
+.spark {
+  position: absolute;
+
+  z-index: 4;
+
+  color: #e4b33b;
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  text-shadow:
+    0 0 8px rgba(214, 165, 46, 0.55);
+
+  animation: trophySpark 3s ease-in-out infinite;
+}
+
+.spark-one {
+  top: 15px;
+  left: 28px;
+
+  font-size: 16px;
+}
+
+.spark-two {
+  top: 21px;
+  right: 27px;
+
+  font-size: 12px;
+
+  animation-delay: 0.8s;
+}
+
+.spark-three {
+  bottom: 18px;
+  right: 31px;
+
+  font-size: 15px;
+
+  animation-delay: 1.5s;
+}
+
+
+/* EXTRA SPARK */
+
+.progress-trophy .spark-three::after {
+  content: "✦";
+
+  position: absolute;
+
+  left: -78px;
+  top: -78px;
+
+  font-size: 9px;
+
+  color: #c99a2b;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   TROPHY ANIMATION
+========================================================= */
+
+@keyframes trophySpark {
+
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+
+/* =========================================================
+   TROPHY HOVER
+========================================================= */
+
+.progress-trophy:hover .trophy-ring {
+  box-shadow:
+    inset 0 0 28px rgba(214, 165, 46, 0.12),
+    0 0 28px rgba(214, 165, 46, 0.20);
+
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
+/* =========================================================
+   PROGRESS CONTENT
+========================================================= */
+
+.progress-content {
+  flex: 1;
+
+  min-width: 0;
+
+  padding-left: 35px;
+}
+
+.eyebrow,
+.section-label,
+.section-title {
+  color: #d6a52e;
+
+  font-size: 11px;
+
+  letter-spacing: 1.5px;
+
+  font-weight: 700;
+}
+
+.progress-content h2 {
+  margin-top: 10px;
+
+  font-family: Georgia, serif;
+
+  font-size: 29px;
+
+  font-weight: 500;
+}
+
+.progress-subtitle {
+  color: #8b8780;
+
+  font-size: 14px;
+
+  margin-top: 7px;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.progress-track {
+  width: 100%;
+
+  max-width: 700px;
+
+  height: 9px;
+
+  background: #292927;
+
+  margin-top: 20px;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 68%;
+
+  height: 100%;
+
+  background: #d6a52e;
+
+  border-radius: inherit;
+}
+
+
+/* =========================================================
+   PROGRESS DIVIDER
+========================================================= */
+
+.progress-divider {
+  width: 1px;
+
+  height: 134px;
+
+  background: #39362f;
+
+  margin: 0 40px;
+}
+
+
+/* =========================================================
+   OVERALL PROGRESS
+========================================================= */
+
+.overall-progress {
+  width: 155px;
+
+  min-width: 155px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.progress-circle {
+  width: 118px;
+  height: 118px;
+
+  position: relative;
+}
+
+.progress-circle svg {
+  width: 100%;
+  height: 100%;
+
+  transform: rotate(-90deg);
+}
+
+.progress-circle circle {
+  fill: none;
+
+  stroke-width: 7;
+}
+
+.circle-bg {
+  stroke: #32312e;
+}
+
+.circle-value {
+  stroke: #d6a52e;
+
+  stroke-dasharray: 264;
+
+  stroke-dashoffset: 84;
+
+  stroke-linecap: butt;
+}
+
+.circle-text {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.circle-text strong {
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+}
+
+.overall-progress > span {
+  color: #aaa59d;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   ACHIEVEMENT SECTION
+========================================================= */
+
+.achievements-section {
+  margin-top: 45px;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.achievement-toolbar {
+  height: 57px;
+
+  border-bottom: 1px solid #292620;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+.achievement-tabs {
+  display: flex;
+
+  gap: 31px;
+
+  height: 100%;
+
+  align-items: flex-end;
+}
+
+.tab {
+  height: 100%;
+
+  padding: 0 0 14px;
+
+  color: #77736d;
+
+  font-size: 13px;
+
+  border: 0;
+
+  border-bottom: 2px solid transparent;
+
+  background: transparent;
+}
+
+.tab:hover {
+  color: #aaa59f;
+}
+
+.tab.active {
+  color: #d6a52e;
+
+  border-bottom-color: #d6a52e;
+}
+
+
+/* SELECT */
+
+.achievement-toolbar select {
+  width: 200px;
+
+  height: 43px;
+
+  background: #111;
+
+  border: 1px solid #3a352a;
+
+  color: #9d9991;
+
+  padding: 0 12px;
+
+  font-size: 12px;
+
+  margin-bottom: 10px;
+
+  outline: none;
+}
+
+.achievement-toolbar select:focus {
+  border-color: #8a6924;
+}
+
+
+/* =========================================================
+   GRID + MILESTONES
+========================================================= */
+
+.achievement-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    340px;
+
+  gap: 20px;
+
+  margin-top: 13px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   ACHIEVEMENT GRID
+========================================================= */
+
+.achievement-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   ACHIEVEMENT CARD
+========================================================= */
+
+.achievement-card {
+  min-height: 226px;
+
+  border: 1px solid #302e29;
+
+  background: #111111;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 25px 17px 20px;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.achievement-card:hover {
+  border-color: #65501e;
+
+  transform: translateY(-2px);
+}
+
+.achievement-card.locked {
+  opacity: 0.58;
+}
+
+
+/* =========================================================
+   ACHIEVEMENT ICON
+========================================================= */
+
+.achievement-icon {
+  width: 74px;
+  height: 74px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  border: 1px solid #c29425;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 29px;
+
+  margin-bottom: 17px;
+
+  color: #d4a52e;
+
+  background: rgba(207, 160, 51, 0.035);
+}
+
+.locked .achievement-icon {
+  border-color: #55534e;
+
+  filter: grayscale(1);
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.achievement-card h3 {
+  font-family: Georgia, serif;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  margin-bottom: 7px;
+}
+
+.achievement-card p {
+  color: #8a867f;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+
+  min-height: 35px;
+
+  max-width: 210px;
+}
+
+
+/* =========================================================
+   CARD STATUS
+========================================================= */
+
+.achievement-status {
+  margin-top: 17px;
+
+  font-size: 13px;
+}
+
+.status-unlocked {
+  color: #d6a52e;
+}
+
+.status-locked {
+  color: #77736d;
+}
+
+.achievement-date {
+  margin-top: 8px;
+
+  color: #77736d;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   RECENT MILESTONES
+========================================================= */
+
+.recent-milestones {
+  min-height: 465px;
+
+  border: 1px solid #302e29;
+
+  background: #111111;
+
+  padding: 29px 25px;
+}
+
+.recent-milestones .section-label {
+  margin-bottom: 27px;
+}
+
+
+/* =========================================================
+   MILESTONE LIST
+========================================================= */
+
+.milestone-list {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.milestone-item {
+  min-height: 74px;
+
+  display: grid;
+
+  grid-template-columns:
+    45px
+    50px
+    1fr;
+
+  align-items: start;
+
+  position: relative;
+}
+
+.milestone-number {
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #6a531f;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #c79a2a;
+
+  font-size: 11px;
+}
+
+.milestone-icon {
+  width: 50px;
+  height: 50px;
+
+  border: 1px solid #403a2c;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 20px;
+
+  color: #d4a52e;
+}
+
+.milestone-content {
+  padding-left: 14px;
+
+  padding-top: 2px;
+}
+
+.milestone-content h4 {
+  font-size: 13px;
+
+  line-height: 1.25;
+
+  font-weight: 600;
+
+  color: #e8e5de;
+}
+
+.milestone-content p {
+  color: #77736d;
+
+  font-size: 10px;
+
+  margin-top: 5px;
+}
+
+.milestone-line {
+  position: absolute;
+
+  left: 20px;
+
+  top: 43px;
+
+  width: 1px;
+
+  height: 31px;
+
+  background: #48412d;
+}
+
+
+/* =========================================================
+   VIEW ALL
+========================================================= */
+
+.view-achievements {
+  width: 100%;
+
+  height: 37px;
+
+  margin-top: 17px;
+
+  border: 1px solid #65501f;
+
+  color: #d5a52e;
+
+  background: transparent;
+
+  font-size: 11px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+}
+
+.view-achievements:hover {
+  background: rgba(214, 165, 46, 0.07);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .achievement-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .recent-milestones {
+    min-height: auto;
+  }
+}
+
+
+@media (max-width: 1000px) {
+
+  .achievement-progress {
+    padding: 25px;
+  }
+
+  .progress-trophy {
+    width: 150px;
+    min-width: 150px;
+  }
+
+  .progress-divider {
+    margin: 0 25px;
+  }
+
+  .achievement-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+@media (max-width: 900px) {
+
+  .achievements-sidebar {
+    width: 185px;
+    min-width: 185px;
+  }
+
+  .achievements-main {
+    margin-left: 185px;
+
+    width: calc(100% - 185px);
+  }
+
+  .achievement-progress {
+    height: auto;
+
+    min-height: 205px;
+  }
+
+  .progress-divider {
+    height: 120px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .achievements-sidebar {
+    display: none;
+  }
+
+  .achievements-main {
+    margin-left: 0;
+
+    width: 100%;
+  }
+
+  .achievements-content {
+    padding: 25px 18px 50px;
+  }
+
+  .achievement-progress {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px 20px;
+  }
+
+  .progress-trophy {
+    width: auto;
+    min-width: 0;
+  }
+
+  .progress-content {
+    width: 100%;
+
+    padding-left: 0;
+
+    text-align: center;
+  }
+
+  .progress-track {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .progress-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 0;
+  }
+
+  .achievement-toolbar {
+    height: auto;
+
+    padding-top: 10px;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .achievement-tabs {
+    width: 100%;
+  }
+
+  .achievement-toolbar select {
+    width: 100%;
+
+    margin-bottom: 10px;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+}

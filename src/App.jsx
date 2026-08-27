@@ -8,6 +8,7 @@ import MockHistory from "./pages/MockHistory/MockHistory";
 import AIInsights from "./pages/AIInsights/AIInsights";
 import Resources from "./pages/Resources/Resources";
 import Settings from "./pages/Settings/Settings";
+import Achievements from "./pages/Achievements/Achievements";
 
 
 function ProtectedRoute({ children }) {
@@ -139,6 +140,20 @@ export default function App() {
         element={
           <ProtectedRoute>
             <Settings />
+          </ProtectedRoute>
+        }
+      />
+
+
+      {/* =========================
+          ACHIEVEMENTS
+      ========================= */}
+
+      <Route
+        path="/achievements"
+        element={
+          <ProtectedRoute>
+            <Achievements />
           </ProtectedRoute>
         }
       />
