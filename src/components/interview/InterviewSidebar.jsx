@@ -5,15 +5,15 @@ const NAV_ITEMS = [
   { label: "Dashboard", path: "/dashboard" },
   { label: "Interviews", path: "/interview" },
   { label: "Analytics", path: "/analytics" },
-  { label: "Mock history", path: "/history" },
-  { label: "AI insights", path: "/insights" },
+{ label: "Mock history", path: "/mock-history" },
+{ label: "AI insights", path: "/ai-insights" }, 
   { label: "Achievements", path: "/achievements" },
   { label: "Resources", path: "/resources" },
   { label: "Settings", path: "/settings" },
 ];
 
 export default function InterviewSidebar({
-  userName = "Piyush Yadav",
+  userName = "Piyush Jha",
   userSub = "B.Tech · AI/ML specialisation",
   activeItem = "Interviews",
 }) {

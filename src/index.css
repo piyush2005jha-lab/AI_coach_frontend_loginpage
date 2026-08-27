@@ -476,3 +476,275 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+/* =========================================================
+   PREPZO — GLOBAL TYPOGRAPHY SYSTEM
+   Keeps every page visually consistent
+========================================================= */
+
+:root {
+  --page-title-size: 32px;
+  --page-title-line: 1.15;
+
+  --page-subtitle-size: 13px;
+  --section-title-size: 20px;
+  --card-title-size: 18px;
+
+  --body-size: 13px;
+  --small-size: 11px;
+  --label-size: 10px;
+
+  --sidebar-size: 13px;
+  --sidebar-small-size: 10px;
+}
+
+
+/* =========================================================
+   COMMON PAGE TITLES
+========================================================= */
+
+.dashboard-shell .section-heading h2,
+.history-title-block h1,
+.ai-title-block h1,
+.page-header h1,
+.resources-header h1,
+.settings-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: var(--page-title-size) !important;
+  line-height: var(--page-title-line);
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   PAGE SUBTITLES
+========================================================= */
+
+.dashboard-shell .section-heading p,
+.history-title-block p,
+.ai-title-block p,
+.page-header p,
+.resources-header p,
+.settings-header p {
+  font-family: "Inter", sans-serif;
+  font-size: var(--page-subtitle-size) !important;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.panel-title h3,
+.panel-header h2,
+.resources-library-header h2,
+.settings-card-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   COMMON BODY TEXT
+========================================================= */
+
+.dashboard-shell p,
+.mock-history-main p,
+.ai-insights-main p,
+.achievements-main p,
+.resources-main p,
+.settings-main p {
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SIDEBAR TYPOGRAPHY
+========================================================= */
+
+.analytics-nav-item,
+.iv-nav-item,
+.mock-history-sidebar .nav-item,
+.sidebar-link {
+  font-family: "Inter", sans-serif;
+  font-size: var(--sidebar-size) !important;
+  line-height: 1.4;
+}
+
+
+/* Sidebar profile */
+.mock-history-sidebar .profile .name,
+.achievements-sidebar .sidebar-profile h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 14px !important;
+  font-weight: 500;
+}
+
+
+/* Sidebar secondary text */
+.mock-history-sidebar .profile .role,
+.achievements-sidebar .sidebar-profile p {
+  font-family: "Inter", sans-serif;
+  font-size: var(--sidebar-small-size) !important;
+}
+
+
+/* Sidebar brand */
+.mock-history-sidebar .brand h1,
+.achievements-sidebar .sidebar-logo span {
+  font-family: "Playfair Display", serif;
+  font-size: 20px !important;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ANALYTICS
+========================================================= */
+
+.analytics-nav-item {
+  font-size: 13px !important;
+}
+
+.panel-header h2 {
+  font-size: 20px !important;
+}
+
+.panel-header p {
+  font-size: 13px !important;
+}
+
+.copilot-title {
+  font-size: 10px !important;
+}
+
+.copilot-card h4 {
+  font-size: 14px !important;
+}
+
+.copilot-card p {
+  font-size: 13px !important;
+}
+
+
+/* =========================================================
+   INTERVIEW
+========================================================= */
+
+/* Keep the actual interview question large,
+   but make the surrounding UI consistent. */
+
+.iv-header-title {
+  font-family: "Playfair Display", serif;
+  font-size: 30px !important;
+  line-height: 1.15;
+}
+
+.iv-nav-item {
+  font-size: 13px !important;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.page-header h1 {
+  font-size: 32px !important;
+}
+
+.section-title {
+  font-size: 11px !important;
+}
+
+.achievement-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 18px !important;
+}
+
+.achievement-card p {
+  font-size: 13px !important;
+}
+
+.progress-subtitle {
+  font-size: 13px !important;
+}
+
+
+/* =========================================================
+   RESOURCES
+========================================================= */
+
+.resources-header h1 {
+  font-size: 32px !important;
+}
+
+.resources-library-header h2 {
+  font-size: 20px !important;
+}
+
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+.settings-header h1 {
+  font-size: 32px !important;
+}
+
+.settings-card-heading h2 {
+  font-size: 18px !important;
+}
+
+
+/* =========================================================
+   MOCK HISTORY
+========================================================= */
+
+.history-title-block h1 {
+  font-size: 32px !important;
+}
+
+.history-search {
+  font-size: 13px !important;
+}
+
+.new-mock-button {
+  font-size: 13px !important;
+}
+
+
+/* =========================================================
+   AI INSIGHTS
+========================================================= */
+
+.ai-title-block h1 {
+  font-size: 32px !important;
+}
+
+
+/* =========================================================
+   GENERAL BUTTON TYPOGRAPHY
+========================================================= */
+
+button,
+a {
+  font-family: "Inter", sans-serif;
+}
+
+
+/* =========================================================
+   SMOOTH TEXT RENDERING
+========================================================= */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.01em;
+}

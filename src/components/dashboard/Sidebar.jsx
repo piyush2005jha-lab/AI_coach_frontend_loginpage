@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 import "../../styles/dashboard/sidebar.css";
 
 const NAV_ITEMS = [
-  "Dashboard",
-  "Interviews",
-  "Analytics",
-  "Mock history",
-  "AI insights",
-  "Achievements",
-  "Resources",
-  "Settings",
+  { label: "Dashboard", path: "/dashboard" },
+  { label: "Interviews", path: "/interview" },
+  { label: "Analytics", path: "/analytics" },
+  { label: "Mock history", path: "/mock-history" },
+  { label: "AI insights", path: "/ai-insights" },
+  { label: "Achievements", path: "/achievements" },
+  { label: "Resources", path: "/resources" },
+  { label: "Settings", path: "/settings" },
 ];
 
 export default function Sidebar({
@@ -19,11 +20,10 @@ export default function Sidebar({
     <aside className={`sidebar ${variant}`}>
 
       {/* BRAND */}
-      <div className="brand">
+      <Link to="/dashboard" className="brand">
         <div className="mark">P</div>
         <h1>Prepzo</h1>
-      </div>
-
+      </Link>
 
       {/* PROFILE */}
       <div className="profile">
@@ -38,25 +38,24 @@ export default function Sidebar({
         </div>
       </div>
 
-
       {/* NAVIGATION */}
       <nav>
         {NAV_ITEMS.map((item) => (
-          <div
-            key={item}
+          <Link
+            key={item.label}
+            to={item.path}
             className={`nav-item ${
-              item === activeItem ? "active" : ""
+              item.label === activeItem ? "active" : ""
             }`}
           >
             <span className="ic">
-              {item === activeItem ? "◆" : "◇"}
+              {item.label === activeItem ? "◆" : "◇"}
             </span>
 
-            {item}
-          </div>
+            {item.label}
+          </Link>
         ))}
       </nav>
-
 
       {/* UPGRADE */}
       <div className="sidebar-foot">
@@ -68,7 +67,6 @@ export default function Sidebar({
           UPGRADE MEMBERSHIP
         </button>
       </div>
-
 
       {/* PROFILE FOOTER */}
       <div className="sidebar-user">
